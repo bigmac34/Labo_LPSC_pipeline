@@ -2112,3 +2112,8 @@ Slack (MET) :             3.781ns  (required time - arrival time)
 
 
 
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210276A5A6A7B
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun May  6 11:55:06 2018...

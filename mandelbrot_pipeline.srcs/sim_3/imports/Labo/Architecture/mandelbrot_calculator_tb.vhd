@@ -101,7 +101,7 @@ architecture testbench of mandelbrot_calculator_tb is
       clk         => clk_sti,
       rst         => rst_sti,
       ready       => ready_obs,
-      start       => start_sti,
+      start       => start_sti, --ready_obs,
       finished    => finished_obs,
       c_real      => c_real_sti,
       c_imaginary => c_imaginary_sti,
@@ -139,7 +139,7 @@ architecture testbench of mandelbrot_calculator_tb is
         wait for 2 ns;
         start_sti <= '0';
 
-        wait for 500 ns;
+        wait for 5500 ns;
 
         --------------------------------------------------
         --  Deuxieme test (arret quand itération = 100) --
@@ -179,7 +179,7 @@ architecture testbench of mandelbrot_calculator_tb is
         --do nothing, juste wait the end of the calcul
         --end loop;
 
-        wait for 500 ns;
+        wait for 3500 ns;
 
         sim_end_s <= true;
         wait; -- Stop the process

@@ -25,7 +25,7 @@ library UNISIM;
 use UNISIM.VComponents.all;
 
 -----------------------------
--- D√©claration de l'entit√© --
+-- DÈclaration de l'entitÈ --
 -----------------------------
 entity mandelbrot_calculator is
 generic (comma	: integer := 12;	-- nombres de bits apr√®s la virgule
@@ -57,12 +57,21 @@ end mandelbrot_calculator;
 --------------------
 architecture calculator of mandelbrot_calculator is
 
+	type tab_complexe is array (0 to 2) of std_logic_vector(SIZE-1 downto 0);
+	type tab_screen is array (0 to 2) of std_logic_vector(SCREEN_RES-1 downto 0);
+
 	------------------
 	--  Constantes  --
 	------------------
 	-- Etat de la machine d'√©tat
 	constant S_READY	: std_logic := '0';
 	constant S_PROCESS	: std_logic := '1';
+	
+	-- Etat pour la machine d'Ètat compteur 
+	constant S0	: std_logic_vector (1 downto 0) := "00";
+	constant S1	: std_logic_vector (1 downto 0) := "01";
+	constant S2	: std_logic_vector (1 downto 0) := "10";
+	constant S_FAILURE	: std_logic_vector (1 downto 0) := "11";
 
 	constant DOUBLE_SIZE : integer := 2*SIZE;
 	-- Valeur limite pour la comparaison (2^2 = 4)
@@ -79,7 +88,21 @@ architecture calculator of mandelbrot_calculator is
 	signal iterations_s		: std_logic_vector(SIZE_INTER-1 downto 0);
 	signal c_real_s			: std_logic_vector(SIZE-1 downto 0);
 	signal c_imaginary_s	: std_logic_vector(SIZE-1 downto 0);
+	signal x_screen_s		: std_logic_vector(SCREEN_RES-1 downto 0);
+	signal y_screen_s		: std_logic_vector(SCREEN_RES-1 downto 0);
 
+	-- buffer pour les entrees
+	signal c_buf_real_s			: std_logic_vector(SIZE-1 downto 0);
+	signal c_buf_imaginary_s	: std_logic_vector(SIZE-1 downto 0);
+	signal x_buf_screen_s		: std_logic_vector(SCREEN_RES-1 downto 0);
+	signal y_buf_screen_s		: std_logic_vector(SCREEN_RES-1 downto 0);
+	
+	-- Tableau pour la gestion du pipeline
+	signal c_tab_real_s 		: tab_complexe;
+	signal c_tab_imaginary_s 	: tab_complexe;
+	signal x_tab_screen_s 		: tab_screen;
+	signal y_tab_screen_s 		: tab_screen;
+	
 	-- Signaux intermediaires pour les calculs
 	signal z_real2_s				: std_logic_vector(DOUBLE_SIZE-1 downto 0);
 	signal z_imaginary2_s			: std_logic_vector(DOUBLE_SIZE-1 downto 0);
@@ -112,7 +135,12 @@ architecture calculator of mandelbrot_calculator is
 	-- Signaux pour la machine d'etat
 	signal EtatPresent: std_logic;
 	signal EtatFutur: std_logic;
-
+	
+	-- Signaux pour la machine d'Ètat compteur
+	signal EtatPresentCompt: std_logic_vector(1 downto 0);
+	signal EtatFuturCompt: std_logic_vector(1 downto 0);
+	signal compteur: integer;
+	
 -------------
 --	Begin  --
 -------------
@@ -124,30 +152,35 @@ begin
 	z_imaginary <= z_imaginary_s;
 	iterations 	<= iterations_s;
 	finished	<= finished_s;
-	c_real_s	<= c_real;
-	c_imaginary_s	<= c_imaginary;
-		
+	--c_real_s	<= c_real;
+	--c_imaginary_s	<= c_imaginary;
+	c_buf_real_s		<= c_real;
+	c_buf_imaginary_s	<= c_imaginary;
+	x_buf_screen_s		<= x_screen_i;
+	y_buf_screen_s		<= y_screen_i;
+	
 	--------------------
 	--  Combinatoire  --
 	--------------------
-	combinatoire : process(ready_s, c_real, c_imaginary, z_new_real_s, z_new_imaginary_s, z_real_s, z_imaginary_s, z_real_x_imaginary_s, z_real2_s, z_imaginary2_s, z_2_real_x_imaginary_s, z_real2_add_imaginary2_s, iterations_s, enable_calcul, z_real2_sub_imaginary2_s)
+	combinatoire : process(ready_s, c_real, c_imaginary, z_new_real_s, z_new_imaginary_s, z_real_s, z_imaginary_s, z_real_x_imaginary_s, z_real2_s, z_imaginary2_s, z_2_real_x_imaginary_s, z_real2_add_imaginary2_s, iterations_s, enable_calcul, z_real2_sub_imaginary2_s,
+							z_new_real_x_imaginary_s,z_new_real2_s,z_new_imaginary2_s, z_new_real2_sub_imaginary2_s, c_real_s, z_new_2_real_x_imaginary_s, c_imaginary_s)
 	begin
 		--  Multiplexeur  --
-		z_real_s 		<= z_new_real_s;
-		z_imaginary_s 	<= z_new_imaginary_s;
+		--z_real_s 		<= z_new_real_s;
+		--z_imaginary_s 	<= z_new_imaginary_s;
 
 		--  Multiplicateurs  --
-		z_real2_s				<= std_logic_vector(signed(z_real_s) * signed(z_real_s));				-- ZR^2
-		z_imaginary2_s			<= std_logic_vector(signed(z_imaginary_s) * signed(z_imaginary_s));		-- ZI^2
-		z_real_x_imaginary_s	<= std_logic_vector(signed(z_real_s) * signed(z_imaginary_s));			-- ZR*ZI
+		z_real2_s				<= std_logic_vector(signed(z_new_real_s) * signed(z_new_real_s));				-- ZR^2
+		z_imaginary2_s			<= std_logic_vector(signed(z_new_imaginary_s) * signed(z_new_imaginary_s));		-- ZI^2
+		z_real_x_imaginary_s	<= std_logic_vector(signed(z_new_real_s) * signed(z_new_imaginary_s));			-- ZR*ZI
 		
 		z_2_real_x_imaginary_s	<= std_logic_vector(z_new_real_x_imaginary_s(DOUBLE_SIZE-2 downto 0) & '0');-- 2*ZR*ZI
 
 		--  Additionneurs - Soustracteurs  --
 		z_real2_sub_imaginary2_s 	<= std_logic_vector(signed(z_new_real2_s) - signed(z_new_imaginary2_s));	-- ZR^2-ZI^2
 		z_real2_add_imaginary2_s 	<= std_logic_vector(signed(z_new_real2_s) + signed(z_new_imaginary2_s));	-- ZR^2+ZI^2
-		z_real_fut_s				<= std_logic_vector(signed(z_new_real2_sub_imaginary2_s) + signed(c_real & "000000000000"));
-		z_imaginary_fut_s			<= std_logic_vector(signed(z_new_2_real_x_imaginary_s) + signed(c_imaginary & "000000000000"));
+		z_real_fut_s				<= std_logic_vector(signed(z_new_real2_sub_imaginary2_s) + signed(std_logic_vector'(c_real_s & "000000000000")));
+		z_imaginary_fut_s			<= std_logic_vector(signed(z_new_2_real_x_imaginary_s) + signed(std_logic_vector'(c_imaginary_s & "000000000000")));
 		new_iterations_s			<= std_logic_vector(signed(iterations_s) + 1);
 
 		--  Comparateurs  --
@@ -165,39 +198,51 @@ begin
 	-----------------------------------------------
 	--  Reset, Bascules et incr√©ment iterations  --
 	-----------------------------------------------
-	bascules: process(clk, rst, rst_calcul, x_screen_i, y_screen_i)
+	bascules: process(clk, rst, rst_calcul, x_screen_s, y_screen_s)
 	begin
 		-- Reset asynchrone --
 		if rst = '1' then
-			z_new_real_s		<= (others => '0');
-			z_new_imaginary_s	<= (others => '0');
-			iterations_s		<= (others => '0');
+			z_new_real_s					<= (others => '0');
+			z_new_imaginary_s				<= (others => '0');
+			iterations_s					<= (others => '0');
+
+			z_new_real2_s					<= (others => '0');
+			z_new_imaginary2_s				<= (others => '0');
 
 			z_new_2_real_x_imaginary_s		<= (others => '0');
 			z_new_real2_sub_imaginary2_s	<= (others => '0');
 			z_new_real2_add_imaginary2_s	<= (others => '0');
 			
-			new_iterations2_s	<= (others => '0');
-			new_iterations3_s	<= (others => '0');
+			 -- new_iterations_s				<= (others => '0');
+			new_iterations2_s				<= (others => '0');
+			new_iterations3_s				<= (others => '0');
 			
-		-- Multiplexeurs --
-		elsif rst_calcul = '1' then
-			z_new_real_s		<= (others => '0');
-			z_new_imaginary_s	<= (others => '0');
-			iterations_s		<= (others => '0');
+			--z_real_fut_s					<= (others => '0');
+			--z_imaginary_fut_s				<= (others => '0');
 			
-			z_new_2_real_x_imaginary_s		<= (others => '0');
-			z_new_real2_sub_imaginary2_s	<= (others => '0');
-			z_new_real2_add_imaginary2_s	<= (others => '0');
-			
-			new_iterations2_s	<= (others => '0');
-			new_iterations3_s	<= (others => '0');
-			
+			c_tab_real_s 					<= (others => (others => '0'));
+			c_tab_imaginary_s 				<= (others => (others => '0'));
+			x_tab_screen_s 					<= (others => (others => '0'));
+			y_tab_screen_s					<= (others => (others => '0'));
+					
 		elsif rising_edge(clk) then
-			x_screen_o <= x_screen_i;
-			y_screen_o <= y_screen_i;
+			x_screen_o <= x_screen_s;
+			y_screen_o <= y_screen_s;
 			
-			if (enable_calcul = '1') then
+			-- Multiplexeurs --
+			if rst_calcul = '1' then
+				z_new_real_s					<= (others => '0');
+				z_new_imaginary_s				<= (others => '0');
+				iterations_s					<= (others => '0');
+				
+				c_tab_real_s(compteur)		<= (c_buf_real_s);
+				c_tab_imaginary_s(compteur) <= (c_buf_imaginary_s);
+				x_tab_screen_s(compteur) 	<= (x_buf_screen_s);
+				y_tab_screen_s(compteur) 	<= (y_buf_screen_s);
+				
+				z_new_real2_add_imaginary2_s	<= (others => '0');
+					
+			elsif (enable_calcul = '1') then
 				-- 1er etage de bascule
 				z_new_real2_s					<= z_real2_s;
 				z_new_imaginary2_s				<= z_imaginary2_s;
@@ -223,7 +268,7 @@ begin
 	----------------------
 	--  Machine d'etat  --
 	----------------------
-	machine_etat: process(EtatPresent, start, finished_s, z_real_s, z_imaginary_s, iterations_s)
+	machine_etat: process(EtatPresent, start, finished_s)
 	begin
 		-- Valeurs par defaut
 		EtatFutur 		<= S_READY;
@@ -256,16 +301,68 @@ begin
 		end case;
 	end process;
 
+	----------------------
+	--  Machine d'etat  --
+	----------------------
+	machine_etat_compt: process(EtatPresentCompt)
+	begin
+		-- Valeurs par defaut
+		EtatFuturCompt 	<= S0;
+		c_real_s 		<= c_tab_real_s(0);	
+		c_imaginary_s 	<= c_tab_imaginary_s(0);
+		x_screen_s 		<= x_tab_screen_s(0);
+		y_screen_s 		<= y_tab_screen_s(0);
+		
+		compteur <= 0;
+
+		case EtatPresentCompt is
+			-- Pr√™t √  lancer un nouveau calcul --
+			when S0  =>
+				c_real_s		<= c_tab_real_s(1);	
+				c_imaginary_s 	<= c_tab_imaginary_s(1);	
+				x_screen_s 		<= x_tab_screen_s(1);
+				y_screen_s 		<= y_tab_screen_s(1);
+				
+				compteur <= 1;
+				EtatFuturCompt <= S1;
+
+			-- Calcul et cours --
+			when S1  =>
+				c_real_s 		<= c_tab_real_s(2);	
+				c_imaginary_s	<= c_tab_imaginary_s(2);
+				x_screen_s 		<= x_tab_screen_s(2);
+				y_screen_s 		<= y_tab_screen_s(2);
+				
+				compteur <= 2;
+				EtatFuturCompt <= S2;
+				
+			when S2  =>
+				c_real_s 		<= c_tab_real_s(0);	
+				c_imaginary_s 	<= c_tab_imaginary_s(0);
+				x_screen_s 		<= x_tab_screen_s(0);
+				y_screen_s 		<= y_tab_screen_s(0);
+				
+				compteur <=0;
+				EtatFuturCompt <= S0;
+
+			when others => null;
+		end case;
+	end process;
+
 	------------------------------------
-	--  Gestion de la machine d'etat  --
+	--  Gestion des machine d'etat  --
 	------------------------------------
-	process (clk, rst)
+	process (clk, rst, enable_calcul)
 	begin
 		if (rst = '1') then
 			EtatPresent <= S_READY;
+			EtatPresentCompt <= S0;
 
 		elsif Rising_Edge(clk) then
 			EtatPresent <= EtatFutur;
+			if (enable_calcul = '1') then
+				EtatPresentCompt <= EtatFuturCompt;
+			end if;
 		end if;
 	end process;
 
