@@ -1,0 +1,2519 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 6536
+License: Customer
+
+Current time: 	Sun May 06 09:09:27 CEST 2018
+Time zone: 	Central European Time (Europe/Berlin)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1440x900
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 154 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	C:/Xilinx/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	Jeremie
+User home directory: C:/Users/Jeremie
+User working directory: C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline
+User country: 	CH
+User language: 	fr
+User locale: 	fr_CH
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2017.4
+RDI_DATADIR: C:/Xilinx/Vivado/2017.4/data
+RDI_BINDIR: C:/Xilinx/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/Jeremie/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/Jeremie/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/Jeremie/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/vivado.log
+Vivado journal file location: 	C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/vivado.jou
+Engine tmp dir: 	C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/.Xil/Vivado-6536-MACCHI
+
+GUI allocated memory:	183 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 499 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\Jeremie\Dropbox\Master\Cours\Semestre2\LPSC\Labo\mandelbrot_pipeline\mandelbrot_pipeline.xpr. Version: Vivado v2017.4 
+// bs (cj):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: MSGMGR_REFRESH_MSG
+// [GUI Memory]: 50 MB (+50239kb) [00:00:08]
+// [Engine Memory]: 498 MB (+370895kb) [00:00:08]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 524 MB (+1138kb) [00:00:11]
+// [GUI Memory]: 55 MB (+2712kb) [00:00:12]
+// [GUI Memory]: 65 MB (+7004kb) [00:00:14]
+// [Engine Memory]: 552 MB (+1519kb) [00:00:14]
+// [Engine Memory]: 582 MB (+2316kb) [00:00:17]
+// Tcl Message: open_project C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'. 
+// [GUI Memory]: 73 MB (+5539kb) [00:00:19]
+// HMemoryUtils.trashcanNow. Engine heap size: 603 MB. GUI used memory: 47 MB. Current time: 5/6/18 9:09:37 AM CEST
+// Tcl Message: open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 792.910 ; gain = 91.352 
+// Project name: mandelbrot_pipeline; location: C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline; part: xc7a200tsbg484-1
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mse_mandelbrot(rtl) (mse_mandelbrot.vhd)]", 1); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mse_mandelbrot(rtl) (mse_mandelbrot.vhd), ComplexValueGeneratorxB.ComplexValueGeneratorxI : ComplexValueGenerator(Behavioral) (ComplexValueGenerator.vhd)]", 3, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mse_mandelbrot(rtl) (mse_mandelbrot.vhd), mandelbrot_calculatorxB.mandelbrot_calculatorxI : mandelbrot_calculator(calculator) (mandelbrot_calculator.vhd)]", 4, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mse_mandelbrot(rtl) (mse_mandelbrot.vhd), mandelbrot_calculatorxB.mandelbrot_calculatorxI : mandelbrot_calculator(calculator) (mandelbrot_calculator.vhd)]", 4, false, false, false, false, true, false); // B (D, cj) - Popup Trigger
+selectMenuItem(PAResourceQtoS.SrcMenu_OPEN_SELECTED_SOURCE_FILES, "Open File"); // ac (ai, cj)
+// [GUI Memory]: 85 MB (+8153kb) [00:00:47]
+// [Engine Memory]: 611 MB (+27kb) [00:00:47]
+// Elapsed time: 133 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mse_mandelbrot(rtl) (mse_mandelbrot.vhd)]", 1, true, false, false, false, true, false); // B (D, cj) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mse_mandelbrot(rtl) (mse_mandelbrot.vhd)]", 1, true, false, false, false, true, false); // B (D, cj) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mse_mandelbrot(rtl) (mse_mandelbrot.vhd)]", 1, true, false, false, false, true, false); // B (D, cj) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mse_mandelbrot(rtl) (mse_mandelbrot.vhd)]", 1, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// HMemoryUtils.trashcanNow. Engine heap size: 624 MB. GUI used memory: 49 MB. Current time: 5/6/18 9:12:19 AM CEST
+// x (cj): Run Synthesis: addNotify
+selectButton("PAResourceQtoS.RunRun_TASK_HAS_ALREADY_COMPLETED_AND_UP_TO_DATE_OK", "OK"); // JButton (A, G)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // x (cj)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_2 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs synth_2 -jobs 4 
+// TclEventType: RUN_MODIFY
+// [GUI Memory]: 91 MB (+1462kb) [00:03:10]
+// Tcl Message: [Sun May  6 09:12:27 2018] Launched synth_2... Run output will be captured here: C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.runs/synth_2/runme.log 
+// 'k' command handler elapsed time: 8 seconds
+dismissDialog("Starting Design Runs"); // bs (cj)
+// [GUI Memory]: 96 MB (+1030kb) [00:04:05]
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// ah (cj): Synthesis Completed: addNotify
+// Elapsed time: 91 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Completed"); // ah (cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mse_mandelbrot(rtl) (mse_mandelbrot.vhd), ComplexValueGeneratorxB.ComplexValueGeneratorxI : ComplexValueGenerator(Behavioral) (ComplexValueGenerator.vhd)]", 3, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mse_mandelbrot(rtl) (mse_mandelbrot.vhd), mandelbrot_calculatorxB.mandelbrot_calculatorxI : mandelbrot_calculator(calculator) (mandelbrot_calculator.vhd)]", 4, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mse_mandelbrot(rtl) (mse_mandelbrot.vhd), mandelbrot_calculatorxB.mandelbrot_calculatorxI : mandelbrot_calculator(calculator) (mandelbrot_calculator.vhd)]", 4, false, false, false, false, true, false); // B (D, cj) - Popup Trigger
+selectMenuItem(PAResourceQtoS.SrcMenu_OPEN_SELECTED_SOURCE_FILES, "Open File"); // ac (ai, cj)
+// [Engine Memory]: 687 MB (+47496kb) [00:05:00]
+floatView(PAResourceOtoP.PAViews_CODE, "mandelbrot_calculator.vhd"); // ax (aF, cj)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+// HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 50 MB. Current time: 5/6/18 9:14:19 AM CEST
+dockFrame(PAResourceOtoP.PAViews_CODE, "mandelbrot_calculator.vhd"); // ax (aF, FrameFloatingContainer)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // R (Q, cj)
+// Elapsed time: 63 seconds
+selectCodeEditor("mandelbrot_calculator.vhd", 448, 383); // cd (w, cj)
+// Elapsed time: 20 seconds
+selectCodeEditor("mandelbrot_calculator.vhd", 223, 300); // cd (w, cj)
+// Elapsed time: 10 seconds
+selectCodeEditor("mandelbrot_calculator.vhd", 143, 195); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 341, 214); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 238, 288); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 115, 110); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 115, 110, false, false, false, false, true); // cd (w, cj) - Double Click
+// Elapsed time: 26 seconds
+selectCodeEditor("mandelbrot_calculator.vhd", 179, 91); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 559, 93); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 10, 68); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 568, 99); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 44, 285); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 54, 295); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 89, 302); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 94, 316); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 91, 331); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 148, 355); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("mandelbrot_calculator.vhd", 579, 145); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 87, 348); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 89, 362); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 92, 373); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 118, 372); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 95, 387); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 90, 402); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 109, 433); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 590, 352); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 171, 295); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 139, 299); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 137, 299); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 137, 299, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mandelbrot_calculator.vhd", 224, 296); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 249, 264); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 329, 291); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 219, 299); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 174, 301); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 174, 301, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 324, 294); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 324, 294, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 295, 303); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 295, 303, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mandelbrot_calculator.vhd", 295, 303); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 288, 311); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 160, 314); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 161, 331); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 159, 362); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 162, 387); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 161, 397); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 307, 315); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 335, 334); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 309, 365); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 333, 384); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 331, 399); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 406, 267); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 357, 359); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 358, 359, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectCodeEditor("mandelbrot_calculator.vhd", 358, 359, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectCodeEditor("mandelbrot_calculator.vhd", 358, 359, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+// [GUI Memory]: 102 MB (+765kb) [00:09:40]
+selectCodeEditor("mandelbrot_calculator.vhd", 311, 373, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectCodeEditor("mandelbrot_calculator.vhd", 286, 368, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectCodeEditor("mandelbrot_calculator.vhd", 246, 368); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 224, 379); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 177, 229); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("mandelbrot_calculator.vhd", 139, 284); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 124, 373); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 139, 431); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 250, 232); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 305, 247); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 333, 233); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 422, 262); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 403, 245); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 371, 268); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 348, 311); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 347, 337); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 346, 347); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 132, 233); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 132, 233, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mandelbrot_calculator.vhd", 130, 248); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 130, 248, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 399, 241); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 399, 241, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 379, 248); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 193, 270); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 193, 270, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 384, 261); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 384, 261, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 390, 266); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 241, 316); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 241, 316, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 397, 313); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 397, 313, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 392, 317); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 231, 325); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 231, 325, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 397, 334); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 397, 334, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 397, 334); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 233, 348); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 233, 348, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 376, 348); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 376, 348, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 376, 348); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 376, 348); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("mandelbrot_calculator.vhd", 371, 392); // cd (w, cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 14 seconds
+selectCodeEditor("mandelbrot_calculator.vhd", 452, 319); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 841, 249); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 428, 285); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 378, 284); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 377, 284); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 562, 291); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 459, 336); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 624, 336); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 456, 350); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 624, 355); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 456, 370); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 453, 388); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 423, 435); // cd (w, cj)
+// Elapsed time: 61 seconds
+selectCodeEditor("mandelbrot_calculator.vhd", 155, 320); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 197, 366); // cd (w, cj)
+// Elapsed time: 39 seconds
+selectCodeEditor("mandelbrot_calculator.vhd", 288, 282); // cd (w, cj)
+// Elapsed time: 89 seconds
+selectCodeEditor("mandelbrot_calculator.vhd", 115, 185); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 115, 185, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mandelbrot_calculator.vhd", 115, 185); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 86, 101); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 86, 101, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mandelbrot_calculator.vhd", 53, 114); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 53, 114, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mandelbrot_calculator.vhd", 53, 114); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 47, 130); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 178, 128); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 174, 145); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 171, 190); // cd (w, cj)
+// Elapsed time: 16 seconds
+selectCodeEditor("mandelbrot_calculator.vhd", 641, 285); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 168, 286); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 142, 298); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 127, 318); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 112, 333); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 264, 309); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 313, 306); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 313, 306, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mandelbrot_calculator.vhd", 174, 316, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectCodeEditor("mandelbrot_calculator.vhd", 141, 318, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectCodeEditor("mandelbrot_calculator.vhd", 141, 318, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectCodeEditor("mandelbrot_calculator.vhd", 110, 321); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 131, 323); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 131, 323, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mandelbrot_calculator.vhd", 139, 318); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 139, 318, false, false, false, false, true); // cd (w, cj) - Double Click
+// Elapsed time: 30 seconds
+selectCodeEditor("mandelbrot_calculator.vhd", 292, 161); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 292, 161, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 160, 162); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 160, 162, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 282, 160); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 220, 162); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 210, 165); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 400, 159); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 185, 167); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 185, 167, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mandelbrot_calculator.vhd", 185, 167); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 144, 174); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 220, 186); // cd (w, cj)
+// [GUI Memory]: 108 MB (+1130kb) [00:17:14]
+selectCodeEditor("mandelbrot_calculator.vhd", 214, 185); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 369, 182); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 348, 197); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 370, 201); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 338, 235); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 115 seconds
+selectCodeEditor("mandelbrot_calculator.vhd", 121, 139); // cd (w, cj)
+// Elapsed time: 48 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis]", 4); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_2 
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_2 -jobs 4 
+// Tcl Message: [Sun May  6 09:29:31 2018] Launched synth_2... Run output will be captured here: C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.runs/synth_2/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cj)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// ah (cj): Synthesis Completed: addNotify
+// Elapsed time: 58 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_2 -jobs 4 
+// Tcl Message: [Sun May  6 09:30:32 2018] Launched impl_2... Run output will be captured here: C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.runs/impl_2/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cj)
+// Elapsed time: 11 seconds
+selectCheckBox(PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String) null, false); // g (aQ, cj): FALSE
+// TclEventType: RUN_STEP_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_COMPLETED
+// ah (cj): Implementation Completed: addNotify
+// Elapsed time: 153 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bs (cj):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_2 
+// [Engine Memory]: 722 MB (+1260kb) [00:24:02]
+// HMemoryUtils.trashcanNow. Engine heap size: 722 MB. GUI used memory: 51 MB. Current time: 5/6/18 9:33:20 AM CEST
+// [Engine Memory]: 928 MB (+178342kb) [00:24:07]
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// [Engine Memory]: 1,068 MB (+98070kb) [00:24:12]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,110 MB. GUI used memory: 49 MB. Current time: 5/6/18 9:33:34 AM CEST
+// [Engine Memory]: 1,333 MB (+221713kb) [00:24:22]
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,546 MB. GUI used memory: 49 MB. Current time: 5/6/18 9:33:41 AM CEST
+// [Engine Memory]: 1,546 MB (+153365kb) [00:24:24]
+// TclEventType: DESIGN_NEW
+// [Engine Memory]: 1,642 MB (+19000kb) [00:24:25]
+// Xgd.load filename: C:/Xilinx/Vivado/2017.4/data/parts/xilinx/artix7/devint/artix7/xc7a200t/xc7a200t.xgd; ZipEntry: xc7a200t_detail.xgd elapsed time: 0.5s
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 1.5s
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 176 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2017.4 INFO: [Device 21-403] Loading part xc7a200tsbg484-1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/.Xil/Vivado-6536-MACCHI/dcp6/mse_mandelbrot_board.xdc] Finished Parsing XDC File [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/.Xil/Vivado-6536-MACCHI/dcp6/mse_mandelbrot_board.xdc] Parsing XDC File [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/.Xil/Vivado-6536-MACCHI/dcp6/mse_mandelbrot_early.xdc] 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sources_1/ip/clk_vga_hdmi_1024x600/clk_vga_hdmi_1024x600.xdc:57] INFO: [Timing 38-2] Deriving generated clocks [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sources_1/ip/clk_vga_hdmi_1024x600/clk_vga_hdmi_1024x600.xdc:57] 
+// Tcl Message: get_clocks: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1804.289 ; gain = 584.871 
+// Tcl Message: Finished Parsing XDC File [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/.Xil/Vivado-6536-MACCHI/dcp6/mse_mandelbrot_early.xdc] Parsing XDC File [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/.Xil/Vivado-6536-MACCHI/dcp6/mse_mandelbrot.xdc] Finished Parsing XDC File [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/.Xil/Vivado-6536-MACCHI/dcp6/mse_mandelbrot.xdc] Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.435 . Memory (MB): peak = 1807.855 ; gain = 3.566 
+// Tcl Message: Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.436 . Memory (MB): peak = 1807.855 ; gain = 3.566 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: DRC_ADDED
+// Device view-level: 0.0
+// Tcl Message: open_run: Time (s): cpu = 00:00:34 ; elapsed = 00:00:27 . Memory (MB): peak = 1916.668 ; gain = 1051.895 
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+// [GUI Memory]: 121 MB (+8153kb) [00:24:33]
+// 'dO' command handler elapsed time: 32 seconds
+// Elapsed time: 32 seconds
+dismissDialog("Open Implemented Design"); // bs (cj)
+// [GUI Memory]: 127 MB (+15kb) [00:25:27]
+// Elapsed time: 75 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 31, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (f)
+dismissDialog("Launch Runs"); // f (cj)
+// [GUI Memory]: 142 MB (+8698kb) [00:25:52]
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 32); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 32); // u (O, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 32, true); // u (O, cj) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bs (cj):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// [Engine Memory]: 1,725 MB (+806kb) [00:25:54]
+// Tcl Message: open_hw 
+dismissDialog("Open Hardware Manager"); // bs (cj)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cZ, cj)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// bs (cj):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2017.4   **** Build date : Dec 15 2017-21:08:27     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   
+dismissDialog("Auto Connect"); // bs (cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis]", 13, true); // u (O, cj) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 28, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (f)
+dismissDialog("Launch Runs"); // f (cj)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cZ, cj)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,270 MB. GUI used memory: 99 MB. Current time: 5/6/18 9:35:36 AM CEST
+// [Engine Memory]: 2,270 MB (+480883kb) [00:26:18]
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cZ, cj)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bA (cj): Program Device: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (bA)
+// 'I' command handler elapsed time: 5 seconds
+dismissDialog("Program Device"); // bA (cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 28, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// bs (cj):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_2 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Sun May  6 09:35:48 2018] Launched impl_2... Run output will be captured here: C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.runs/impl_2/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cj)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 3000 ms.
+// ah (cj): Bitstream Generation Completed: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 2,288 MB. GUI used memory: 102 MB. Current time: 5/6/18 9:37:09 AM CEST
+// Elapsed time: 92 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // ah (cj)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cZ, cj)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bA (cj): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bA)
+// bs (cj):  Program Device : addNotify
+dismissDialog("Program Device"); // bA (cj)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a200t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a200t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.runs/impl_2/mse_mandelbrot.bit} [get_hw_devices xc7a200t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a200t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// Tcl Message: program_hw_devices: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2507.930 ; gain = 0.000 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a200t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a200t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 7 seconds
+dismissDialog("Program Device"); // bs (cj)
+// Elapsed time: 15 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cZ, cj)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bA (cj): Program Device: addNotify
+applyEnter(PAResourceOtoP.ProgramFpgaDialog_SPECIFY_BITSTREAM_FILE, "C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.runs/impl_2/mse_mandelbrot.bit"); // ag (af, bA)
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bA)
+// bs (cj):  Program Device : addNotify
+dismissDialog("Program Device"); // bA (cj)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a200t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a200t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.runs/impl_2/mse_mandelbrot.bit} [get_hw_devices xc7a200t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a200t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// Tcl Message: program_hw_devices: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2507.930 ; gain = 0.000 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a200t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a200t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 7 seconds
+dismissDialog("Program Device"); // bs (cj)
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 29, true); // u (O, cj) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 31, false); // u (O, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 235, 233); // cd (w, cj)
+// Elapsed time: 18 seconds
+selectCodeEditor("mandelbrot_calculator.vhd", 238, 236); // cd (w, cj)
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // N (Q, cj)
+// Elapsed time: 36 seconds
+selectCodeEditor("mandelbrot_calculator.vhd", 194, 73); // cd (w, cj)
+// Elapsed time: 10 seconds
+selectCodeEditor("mandelbrot_calculator.vhd", 286, 161); // cd (w, cj)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210276A5A6A7B 
+// n (cj): Close Hardware Target: addNotify
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// Elapsed time: 54 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (n)
+dismissDialog("Close Hardware Target"); // n (cj)
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'set_property PROGRAM.FILE {C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.runs/impl_2/mse_mandelbrot.bit} [get_hw_devices xc7a200t_0]' 
+selectCodeEditor("mandelbrot_calculator.vhd", 45, 190); // cd (w, cj)
+// [GUI Memory]: 149 MB (+54kb) [00:31:06]
+selectCodeEditor("mandelbrot_calculator.vhd", 49, 181); // cd (w, cj)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Elapsed time: 112 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cZ, cj)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bA (cj): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bA)
+// bs (cj):  Program Device : addNotify
+dismissDialog("Program Device"); // bA (cj)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a200t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a200t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.runs/impl_2/mse_mandelbrot.bit} [get_hw_devices xc7a200t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a200t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// Tcl Message: program_hw_devices: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2510.328 ; gain = 0.000 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a200t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a200t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 7 seconds
+dismissDialog("Program Device"); // bs (cj)
+// Elapsed time: 141 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9, true); // u (O, cj) - Node
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 6); // u (O, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9, true); // u (O, cj) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9, true, false, false, false, true, false); // u (O, cj) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9, true); // u (O, cj) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9, true, false, false, false, true, false); // u (O, cj) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_SETTINGS, "Simulation Settings..."); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_SETTINGS
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// v (cj): Settings: addNotify
+// [GUI Memory]: 164 MB (+7670kb) [00:35:35]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,321 MB. GUI used memory: 114 MB. Current time: 5/6/18 9:44:54 AM CEST
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (v)
+dismissDialog("Settings"); // v (cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false, false, false, false, true, false); // u (O, cj) - Popup Trigger
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false, false, false, false, true, false); // u (O, cj) - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// am (cj): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (am)
+// bs (cj):  Save Constraints : addNotify
+// e (cj):  Run Simulation : addNotify
+dismissDialog("Save Project"); // am (cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// Tcl Message: launch_simulation -simset sim_3 
+// Tcl Message: INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator... 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs INFO: [SIM-utils-51] Simulation object is 'sim_3' 
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: INFO: [USF-XSim-7] Finding pre-compiled libraries... INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' INFO: [SIM-utils-54] Inspecting design source files for 'mandelbrot_calculator_tb' in fileset 'sim_3'... 
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: INFO: [USF-XSim-97] Finding global include files... 
+// Tcl Message: INFO: [USF-XSim-98] Fetching design files from 'sim_3'... INFO: [USF-XSim-2] XSim::Compile design 
+// Tcl Message: INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' 
+// Tcl Message: "xvlog --incr --relax -prj mandelbrot_calculator_tb_vlog.prj" 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '3' seconds INFO: [USF-XSim-99] Step results log file:'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 2524.227 ; gain = 3.328 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 13 seconds
+// Elapsed time: 10 seconds
+selectButton("RDIResource.ProgressDialog_ERROR_ENCOUNTERED_PLEASE_SEE_TCL_OK", "OK"); // JButton (A, G)
+// a (cj): Critical Messages: addNotify
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cj)
+unMinimizeFrame(PAResourceOtoP.PAViews_TCL_CONSOLE, "Tcl Console"); // ax
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, false); // g (aQ, cj): FALSE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,359 MB. GUI used memory: 132 MB. Current time: 5/6/18 9:45:37 AM CEST
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, impl_2, launch_simulation -simset sim_3. , [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' file for more information.. ]", 2, false); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, impl_2, launch_simulation -simset sim_3. , [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' file for more information.. ]", 2, false, false, false, false, false, true); // ah (O, cj) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, impl_2, launch_simulation -simset sim_3. , [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' file for more information.. ]", 2, false); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, impl_2, launch_simulation -simset sim_3. , [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' file for more information.. ]", 2, false, false, false, false, false, true); // ah (O, cj) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, impl_2, launch_simulation -simset sim_3. , [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.. ]", 3, false); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, impl_2, launch_simulation -simset sim_3. , [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.. ]", 3, false, false, false, false, false, true); // ah (O, cj) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, impl_2, launch_simulation -simset sim_3. , [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.. ]", 3, false); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, impl_2, launch_simulation -simset sim_3. , [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' file for more information.. ]", 2, false); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, impl_2, launch_simulation -simset sim_3. , [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' file for more information.. ]", 2, false, false, false, false, true, false); // ah (O, cj) - Popup Trigger
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, impl_2, launch_simulation -simset sim_3. , [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' file for more information.. ]", 2, false); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, impl_2, launch_simulation -simset sim_3. , [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' file for more information.. ]", 2, false, false, false, false, false, true); // ah (O, cj) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, impl_2, launch_simulation -simset sim_3. , [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' file for more information.. ]", 2, false); // ah (O, cj)
+floatView(PAResourceOtoP.PAViews_CODE, "mandelbrot_calculator.vhd"); // ax (aF, cj)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+dockFrame(PAResourceOtoP.PAViews_CODE, "mandelbrot_calculator.vhd"); // ax (aF, FrameFloatingContainer)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // N (Q, cj)
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, cj) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cj)
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // R (Q, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator.vhd", 1); // k (j, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mse_mandelbrot(rtl) (mse_mandelbrot.vhd)]", 1, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mse_mandelbrot(rtl) (mse_mandelbrot.vhd)]", 1, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+// Elapsed time: 30 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0); // u (O, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9, true); // u (O, cj) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9, true, false, false, false, false, true); // u (O, cj) - Double Click - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9, true, false, false, false, true, false); // u (O, cj) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_SETTINGS, "Simulation Settings..."); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_SETTINGS
+// v (cj): Settings: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (v)
+// [GUI Memory]: 176 MB (+4302kb) [00:38:08]
+dismissDialog("Settings"); // v (cj)
+// [GUI Memory]: 188 MB (+3340kb) [00:39:00]
+// Elapsed time: 72 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9, true, false, false, false, true, false); // u (O, cj) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_SETTINGS, "Simulation Settings..."); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_SETTINGS
+// v (cj): Settings: addNotify
+selectButton(PAResourceOtoP.ProjectSettingsSimulationPanel_SELECT_TESTBENCH_TOP_MODULE, (String) null); // q (ah, v)
+// bs (v):  Analyze source files for top modules : addNotify
+// Q (v): Select Top Module: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 2,391 MB. GUI used memory: 119 MB. Current time: 5/6/18 9:48:50 AM CEST
+// [Engine Memory]: 2,391 MB (+8519kb) [00:39:32]
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (Q)
+dismissDialog("Select Top Module"); // Q (v)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (v)
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (v)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (v)
+dismissDialog("Settings"); // v (cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cj)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: FILE_SET_CHANGE
+// e (cj):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// Tcl Message: launch_simulation -simset sim_3 
+// Tcl Message: INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator... 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs INFO: [SIM-utils-51] Simulation object is 'sim_3' INFO: [USF-XSim-7] Finding pre-compiled libraries... INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' INFO: [SIM-utils-54] Inspecting design source files for 'mandelbrot_calculator_tb' in fileset 'sim_3'... 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: INFO: [USF-XSim-97] Finding global include files... 
+// Tcl Message: INFO: [USF-XSim-98] Fetching design files from 'sim_3'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' 
+// Tcl Message: "xvlog --incr --relax -prj mandelbrot_calculator_tb_vlog.prj" 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '3' seconds INFO: [USF-XSim-99] Step results log file:'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 6 seconds
+selectButton("RDIResource.ProgressDialog_ERROR_ENCOUNTERED_PLEASE_SEE_TCL_OK", "OK"); // JButton (A, G)
+// a (cj): Critical Messages: addNotify
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Critical Messages"); // a (cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, impl_2, launch_simulation -simset sim_3. , [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' file for more information.. ]", 2, false); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, impl_2, launch_simulation -simset sim_3. , [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' file for more information.. ]", 2, false, false, false, false, false, true); // ah (O, cj) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, impl_2, launch_simulation -simset sim_3. , [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' file for more information.. ]", 2, false); // ah (O, cj)
+// Elapsed time: 249 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // R (Q, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cj)
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // ax
+// Elapsed time: 13 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mse_mandelbrot(rtl) (mse_mandelbrot.vhd)]", 1); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mse_mandelbrot(rtl) (mse_mandelbrot.vhd)]", 1, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mse_mandelbrot(rtl) (mse_mandelbrot.vhd)]", 1, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mse_mandelbrot(rtl) (mse_mandelbrot.vhd)]", 1, true); // B (D, cj) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mse_mandelbrot(rtl) (mse_mandelbrot.vhd)]", 1); // B (D, cj)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mse_mandelbrot(rtl) (mse_mandelbrot.vhd)]", 1); // B (D, cj)
+selectCodeEditor("mse_mandelbrot.vhd", 311, 439); // cd (w, cj)
+typeControlKey((HResource) null, "mse_mandelbrot.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mse_mandelbrot.vhd", 213, 297); // cd (w, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 14); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_3]", 15); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_3, mandelbrot_calculator_tb(testbench) (mandelbrot_calculator_tb.vhd)]", 16, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_3, mandelbrot_calculator_tb(testbench) (mandelbrot_calculator_tb.vhd)]", 16, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_3, mandelbrot_calculator_tb(testbench) (mandelbrot_calculator_tb.vhd)]", 16, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_3, mandelbrot_calculator_tb(testbench) (mandelbrot_calculator_tb.vhd), duv : mandelbrot_calculator(calculator) (mandelbrot_calculator.vhd)]", 17, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_3, mandelbrot_calculator_tb(testbench) (mandelbrot_calculator_tb.vhd), duv : mandelbrot_calculator(calculator) (mandelbrot_calculator.vhd)]", 17, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_3, mandelbrot_calculator_tb(testbench) (mandelbrot_calculator_tb.vhd)]", 16, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_3, mandelbrot_calculator_tb(testbench) (mandelbrot_calculator_tb.vhd)]", 16, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 135, 502); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator_tb.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 149, 148); // cd (w, cj)
+typeControlKey(null, null, 'z');
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 157, 358); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mse_mandelbrot.vhd", 2); // k (j, cj)
+// Elapsed time: 30 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator_tb.vhd", 3); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mse_mandelbrot.vhd", 2); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator_tb.vhd", 3); // k (j, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 193, 231); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 37, 216); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mse_mandelbrot.vhd", 2); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator_tb.vhd", 3); // k (j, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 114, 133); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mse_mandelbrot.vhd", 2); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator_tb.vhd", 3); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mse_mandelbrot.vhd", 2); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator_tb.vhd", 3); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mse_mandelbrot.vhd", 2); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator_tb.vhd", 3); // k (j, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator]", 1); // u (O, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false, false, false, false, false, true); // u (O, cj) - Double Click
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cj):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// Tcl Message: launch_simulation -simset sim_3 
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: INFO: [USF-XSim-97] Finding global include files... 
+// Tcl Message: INFO: [USF-XSim-98] Fetching design files from 'sim_3'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' 
+// Tcl Message: "xvlog --incr --relax -prj mandelbrot_calculator_tb_vlog.prj" 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-99] Step results log file:'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 6 seconds
+selectButton("RDIResource.ProgressDialog_ERROR_ENCOUNTERED_PLEASE_SEE_TCL_OK", "OK"); // JButton (A, G)
+// a (cj): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cj)
+// [GUI Memory]: 199 MB (+1103kb) [00:47:53]
+// Elapsed time: 48 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mse_mandelbrot.vhd", 2); // k (j, cj)
+// Elapsed time: 25 seconds
+selectCodeEditor("mse_mandelbrot.vhd", 232, 199); // cd (w, cj)
+selectCodeEditor("mse_mandelbrot.vhd", 232, 199, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mse_mandelbrot.vhd", 'c'); // cd (w, cj)
+// Elapsed time: 25 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator.vhd", 1); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator_tb.vhd", 3); // k (j, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 77, 297); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 77, 297, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 61, 347); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 61, 347, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 267, 454); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator_tb.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 156, 270, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 149, 281); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 153, 281); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator_tb.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 49, 298); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 231, 296); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 189, 285); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 195, 342); // cd (w, cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 94, 417); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 94, 417, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 107, 517); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 107, 517, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mandelbrot_calculator_tb.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 146, 472); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator_tb.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 166, 502); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 6); // u (O, cj)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cj):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// Tcl Message: launch_simulation -simset sim_3 
+// Tcl Message: INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator... 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs INFO: [SIM-utils-51] Simulation object is 'sim_3' INFO: [USF-XSim-7] Finding pre-compiled libraries... INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' INFO: [SIM-utils-54] Inspecting design source files for 'mandelbrot_calculator_tb' in fileset 'sim_3'... 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_3'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' 
+// Tcl Message: "xvlog --incr --relax -prj mandelbrot_calculator_tb_vlog.prj" 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-99] Step results log file:'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 5 seconds
+selectButton("RDIResource.ProgressDialog_ERROR_ENCOUNTERED_PLEASE_SEE_TCL_OK", "OK"); // JButton (A, G)
+// a (cj): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cj)
+// Elapsed time: 29 seconds
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 254, 158); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 226, 176); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 182, 202); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 20, 281); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 79, 366); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 11 seconds
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 162, 270); // cd (w, cj)
+// Elapsed time: 22 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0); // u (O, cj)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cj):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// Tcl Message: launch_simulation -simset sim_3 
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: INFO: [USF-XSim-97] Finding global include files... 
+// Tcl Message: INFO: [USF-XSim-98] Fetching design files from 'sim_3'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' 
+// Tcl Message: "xvlog --incr --relax -prj mandelbrot_calculator_tb_vlog.prj" 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-99] Step results log file:'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 6 seconds
+selectButton("RDIResource.ProgressDialog_ERROR_ENCOUNTERED_PLEASE_SEE_TCL_OK", "OK"); // JButton (A, G)
+// a (cj): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cj)
+// Elapsed time: 20 seconds
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 277, 309); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 233, 309); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 219, 351); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 212, 401); // cd (w, cj)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mse_mandelbrot.vhd", 2); // k (j, cj)
+// Elapsed time: 20 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator_tb.vhd", 3); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mse_mandelbrot.vhd", 2); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator_tb.vhd", 3); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mse_mandelbrot.vhd", 2); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator_tb.vhd", 3); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mse_mandelbrot.vhd", 2); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator_tb.vhd", 3); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mse_mandelbrot.vhd", 2); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator_tb.vhd", 3); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mse_mandelbrot.vhd", 2); // k (j, cj)
+selectCodeEditor("mse_mandelbrot.vhd", 244, 196); // cd (w, cj)
+selectCodeEditor("mse_mandelbrot.vhd", 244, 196, false, false, false, false, true); // cd (w, cj) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator_tb.vhd", 3); // k (j, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 224, 325); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 126, 352); // cd (w, cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator]", 1); // u (O, cj)
+// TclEventType: DG_GRAPH_GENERATED
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cj):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// Tcl Message: launch_simulation -simset sim_3 
+// Tcl Message: INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator... 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs INFO: [SIM-utils-51] Simulation object is 'sim_3' INFO: [USF-XSim-7] Finding pre-compiled libraries... INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' INFO: [SIM-utils-54] Inspecting design source files for 'mandelbrot_calculator_tb' in fileset 'sim_3'... 
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: INFO: [USF-XSim-97] Finding global include files... 
+// Tcl Message: INFO: [USF-XSim-98] Fetching design files from 'sim_3'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' 
+// Tcl Message: "xvlog --incr --relax -prj mandelbrot_calculator_tb_vlog.prj" 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-99] Step results log file:'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 5 seconds
+selectButton("RDIResource.ProgressDialog_ERROR_ENCOUNTERED_PLEASE_SEE_TCL_OK", "OK"); // JButton (A, G)
+// a (cj): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cj)
+// Elapsed time: 37 seconds
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 106, 194); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mse_mandelbrot.vhd", 2); // k (j, cj)
+// Elapsed time: 26 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator_tb.vhd", 3); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mse_mandelbrot.vhd", 2); // k (j, cj)
+selectCodeEditor("mse_mandelbrot.vhd", 134, 180); // cd (w, cj)
+selectCodeEditor("mse_mandelbrot.vhd", 134, 180, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mse_mandelbrot.vhd", 134, 180); // cd (w, cj)
+typeControlKey((HResource) null, "mse_mandelbrot.vhd", 'c'); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator_tb.vhd", 3); // k (j, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 143, 233); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator_tb.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 136, 229); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 252, 213); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 228, 307); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mse_mandelbrot.vhd", 2); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator_tb.vhd", 3); // k (j, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 89, 226); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 89, 226, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mandelbrot_calculator_tb.vhd", 'c'); // cd (w, cj)
+// Elapsed time: 22 seconds
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 241, 267); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator_tb.vhd", 'v'); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mse_mandelbrot.vhd", 2); // k (j, cj)
+// Elapsed time: 17 seconds
+selectCodeEditor("mse_mandelbrot.vhd", 29, 80); // cd (w, cj)
+typeControlKey((HResource) null, "mse_mandelbrot.vhd", 'c'); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator_tb.vhd", 3); // k (j, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 13, 180); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator_tb.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 282, 397); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 127, 295); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 127, 295, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 127, 295); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 166, 375); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [GUI Memory]: 209 MB (+621kb) [00:56:36]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis]", 3); // u (O, cj)
+// TclEventType: DG_GRAPH_GENERATED
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cj):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// Tcl Message: launch_simulation -simset sim_3 
+// Tcl Message: INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator... 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs INFO: [SIM-utils-51] Simulation object is 'sim_3' INFO: [USF-XSim-7] Finding pre-compiled libraries... INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' INFO: [SIM-utils-54] Inspecting design source files for 'mandelbrot_calculator_tb' in fileset 'sim_3'... 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_3'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' 
+// Tcl Message: "xvlog --incr --relax -prj mandelbrot_calculator_tb_vlog.prj" 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '3' seconds INFO: [USF-XSim-99] Step results log file:'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xvhdl.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 6 seconds
+selectButton("RDIResource.ProgressDialog_ERROR_ENCOUNTERED_PLEASE_SEE_TCL_OK", "OK"); // JButton (A, G)
+// a (cj): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cj)
+// Elapsed time: 19 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mse_mandelbrot.vhd", 2); // k (j, cj)
+// Elapsed time: 25 seconds
+selectCodeEditor("mse_mandelbrot.vhd", 203, 264); // cd (w, cj)
+// Elapsed time: 15 seconds
+selectCodeEditor("mse_mandelbrot.vhd", 325, 442); // cd (w, cj)
+selectCodeEditor("mse_mandelbrot.vhd", 293, 436); // cd (w, cj)
+selectCodeEditor("mse_mandelbrot.vhd", 321, 437); // cd (w, cj)
+typeControlKey((HResource) null, "mse_mandelbrot.vhd", 'c'); // cd (w, cj)
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator_tb.vhd", 3); // k (j, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 270, 320); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator_tb.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 271, 320); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 272, 399); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 131, 352); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 155, 348); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 155, 348, false, false, false, false, true); // cd (w, cj) - Double Click
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mse_mandelbrot.vhd", 2); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator.vhd", 1); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mse_mandelbrot.vhd", 2); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator.vhd", 1); // k (j, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 246, 317); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator_tb.vhd", 3); // k (j, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 295, 255); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 319, 271); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 144, 401); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator_tb.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 149, 416); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator_tb.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 183, 440); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 183, 440, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 192, 478); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 38, 441); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 38, 449); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 114, 481); // cd (w, cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 6); // u (O, cj)
+selectCodeEditor("mandelbrot_calculator_tb.vhd", 276, 416); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 5); // u (O, cj)
+// TclEventType: DG_GRAPH_GENERATED
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cj):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// Tcl Message: launch_simulation -simset sim_3 
+// Tcl Message: INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator... 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs INFO: [SIM-utils-51] Simulation object is 'sim_3' INFO: [USF-XSim-7] Finding pre-compiled libraries... INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' INFO: [SIM-utils-54] Inspecting design source files for 'mandelbrot_calculator_tb' in fileset 'sim_3'... 
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_3'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' 
+// Tcl Message: "xvlog --incr --relax -prj mandelbrot_calculator_tb_vlog.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: "xvhdl --incr --relax -prj mandelbrot_calculator_tb_vhdl.prj" INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sources_1/imports/Labo/Architecture/mandelbrot_calculator.vhd" into library xil_defaultlib INFO: [VRFC 10-307] analyzing entity mandelbrot_calculator INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sim_3/imports/Labo/Architecture/mandelbrot_calculator_tb.vhd" into library xil_defaultlib INFO: [VRFC 10-307] analyzing entity mandelbrot_calculator_tb 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' 
+// Tcl Message: Built simulation snapshot mandelbrot_calculator_tb_behav 
+// Tcl Message:  ****** Webtalk v2017.4 (64-bit)   **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017   **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.  source C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xsim.dir/mandelbrot_calculator_tb_behav/webtalk/xsim_webtalk.tcl -notrace 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [Common 17-186] 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim/xsim.dir/mandelbrot_calculator_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sun May  6 10:08:54 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.4/doc/webtalk_introduction.html. INFO: [Common 17-206] Exiting Webtalk at Sun May  6 10:08:54 2018... 
+// Tcl Message: run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 2673.422 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds 
+// TclEventType: LOAD_FEATURE
+// Tcl Message: INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "mandelbrot_calculator_tb_behav -key {Behavioral:sim_3:Functional:mandelbrot_calculator_tb} -tclbatch {mandelbrot_calculator_tb.tcl} -view {C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sim_3/imports/Labo/mse_mandelbrot_no_bram/mandelbrot_calculator_tb_behav.wcfg} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2017.4 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// Tcl Message: Time resolution is 1 ps 
+// Tcl Message: open_wave_config C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sim_3/imports/Labo/mse_mandelbrot_no_bram/mandelbrot_calculator_tb_behav.wcfg 
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,400 MB. GUI used memory: 123 MB. Current time: 5/6/18 10:09:00 AM CEST
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: source mandelbrot_calculator_tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'mandelbrot_calculator_tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 2718.578 ; gain = 45.156 
+// 'd' command handler elapsed time: 18 seconds
+// Elapsed time: 19 seconds
+dismissDialog("Run Simulation"); // e (cj)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 121 MB. Current time: 5/6/18 10:09:05 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 31 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 144, 223); // n (o, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 120 MB. Current time: 5/6/18 10:09:33 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 32 seconds
+expandTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, z_real_obs[15:0]]", 7); // a (s, cj)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+collapseTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, z_real_obs[15:0]]", 7); // a (s, cj)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 120 MB. Current time: 5/6/18 10:10:07 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 120 MB. Current time: 5/6/18 10:10:58 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:01 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:19 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:19 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:29 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 86 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 164, 234); // n (o, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:34 AM CEST
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 164, 236); // n (o, cj)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:35 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:36 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 135, 244); // n (o, cj)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 135, 244, false, false, false, false, true); // n (o, cj) - Double Click
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:38 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 132, 245); // n (o, cj)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:40 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:40 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:41 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:41 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:41 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 123 MB. Current time: 5/6/18 10:11:41 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 123 MB. Current time: 5/6/18 10:11:41 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 122 MB. Current time: 5/6/18 10:11:42 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 122 MB. Current time: 5/6/18 10:11:42 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:42 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 123 MB. Current time: 5/6/18 10:11:43 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 114, 249); // n (o, cj)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:45 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:45 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:45 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 107, 251); // n (o, cj)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:47 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 120 MB. Current time: 5/6/18 10:11:47 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 122 MB. Current time: 5/6/18 10:11:48 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:48 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:48 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:49 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:49 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 122 MB. Current time: 5/6/18 10:11:49 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:50 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:50 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 122 MB. Current time: 5/6/18 10:11:50 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 122 MB. Current time: 5/6/18 10:11:50 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:50 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 123 MB. Current time: 5/6/18 10:11:50 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 123 MB. Current time: 5/6/18 10:11:51 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 123 MB. Current time: 5/6/18 10:11:51 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 139, 248); // n (o, cj)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 123 MB. Current time: 5/6/18 10:11:52 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 123 MB. Current time: 5/6/18 10:11:53 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:53 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+expandTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, z_imaginary_obs[15:0]]", 8); // a (s, cj)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:11:58 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:02 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 246, 230); // n (o, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:03 AM CEST
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 246, 231); // n (o, cj)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 245, 238); // n (o, cj)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 124 MB. Current time: 5/6/18 10:12:06 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:07 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:07 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 242, 278); // n (o, cj)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 94, 282); // n (o, cj)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 128 MB. Current time: 5/6/18 10:12:14 AM CEST
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 177, 285); // n (o, cj)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+collapseTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, z_imaginary_obs[15:0]]", 8); // a (s, cj)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:26 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Elapsed time: 16 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 146, 293); // n (o, cj)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 146, 293, false, false, false, false, true); // n (o, cj) - Double Click
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:39 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 146, 293); // n (o, cj)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 123 MB. Current time: 5/6/18 10:12:39 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 123 MB. Current time: 5/6/18 10:12:39 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:39 AM CEST
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:39 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 122 MB. Current time: 5/6/18 10:12:40 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:40 AM CEST
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:40 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:40 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:40 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 142, 238); // n (o, cj)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 123 MB. Current time: 5/6/18 10:12:42 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:42 AM CEST
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:42 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:42 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 137, 304); // n (o, cj)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 263, 300); // n (o, cj)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:47 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:48 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:48 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:48 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 106, 291); // n (o, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:49 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:49 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 208, 267); // n (o, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:51 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:51 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:52 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 119 MB. Current time: 5/6/18 10:12:52 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 29 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator_tb.vhd", 2); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mse_mandelbrot.vhd", 1); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mandelbrot_calculator.vhd", 0); // k (j, cj)
+// Elapsed time: 70 seconds
+selectCodeEditor("mandelbrot_calculator.vhd", 158, 200); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 158, 200, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mandelbrot_calculator.vhd", 547, 237); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 116, 168); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 114, 176); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 418, 184); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 108, 275); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 207, 303); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 244, 196); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 393, 234); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 393, 234, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 330, 229, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectCodeEditor("mandelbrot_calculator.vhd", 330, 229, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectCodeEditor("mandelbrot_calculator.vhd", 330, 229, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectCodeEditor("mandelbrot_calculator.vhd", 330, 229, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+// Find in Files: addNotify
+selectButton(PAResourceEtoH.FindAndReplaceAllDialog_CLOSE, "Close"); // x (q)
+selectCodeEditor("mandelbrot_calculator.vhd", 327, 236); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 412, 246); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 412, 246, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 392, 267); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 392, 267, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 310, 303); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 310, 303, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 306, 312, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectCodeEditor("mandelbrot_calculator.vhd", 306, 312, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectCodeEditor("mandelbrot_calculator.vhd", 306, 312, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectCodeEditor("mandelbrot_calculator.vhd", 303, 314); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 290, 317); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 290, 317, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 392, 294); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 392, 294, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("mandelbrot_calculator.vhd", 453, 298); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("mandelbrot_calculator.vhd", 417, 326); // cd (w, cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("mandelbrot_calculator.vhd", 364, 165); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 365, 265); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 174, 178); // cd (w, cj)
+typeControlKey((HResource) null, "mandelbrot_calculator.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 166, 193); // cd (w, cj)
+selectCodeEditor("mandelbrot_calculator.vhd", 412, 279); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator]", 1); // u (O, cj)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// e (cj):  Run Simulation : addNotify
+selectButton("PAResourceQtoS.SimulationRun_SIMULATION_ALREADY_RUNNING_DO_YOU_Yes", "Yes"); // JButton (A, G)
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+// Tcl Message: close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2722.027 ; gain = 0.000 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: launch_simulation -simset sim_3 
+// Tcl Message: INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator... 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs INFO: [SIM-utils-51] Simulation object is 'sim_3' INFO: [USF-XSim-7] Finding pre-compiled libraries... INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' INFO: [SIM-utils-54] Inspecting design source files for 'mandelbrot_calculator_tb' in fileset 'sim_3'... 
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: INFO: [USF-XSim-97] Finding global include files... 
+// Tcl Message: INFO: [USF-XSim-98] Fetching design files from 'sim_3'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' 
+// Tcl Message: "xvlog --incr --relax -prj mandelbrot_calculator_tb_vlog.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: "xvhdl --incr --relax -prj mandelbrot_calculator_tb_vhdl.prj" INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sources_1/imports/Labo/Architecture/mandelbrot_calculator.vhd" into library xil_defaultlib INFO: [VRFC 10-307] analyzing entity mandelbrot_calculator 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '3' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds 
+// Tcl Message: INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.sim/sim_3/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "mandelbrot_calculator_tb_behav -key {Behavioral:sim_3:Functional:mandelbrot_calculator_tb} -tclbatch {mandelbrot_calculator_tb.tcl} -view {C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sim_3/imports/Labo/mse_mandelbrot_no_bram/mandelbrot_calculator_tb_behav.wcfg} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2017.4 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 121 MB. Current time: 5/6/18 10:16:21 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: Time resolution is 1 ps 
+// Tcl Message: open_wave_config C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sim_3/imports/Labo/mse_mandelbrot_no_bram/mandelbrot_calculator_tb_behav.wcfg 
+// Tcl Message: source mandelbrot_calculator_tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'mandelbrot_calculator_tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 2722.027 ; gain = 0.000 
+// 'd' command handler elapsed time: 21 seconds
+// Elapsed time: 13 seconds
+dismissDialog("Run Simulation"); // e (cj)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // R (Q, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 123 MB. Current time: 5/6/18 10:16:29 AM CEST
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 149, 474); // n (o, cj)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 123 MB. Current time: 5/6/18 10:16:31 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 123 MB. Current time: 5/6/18 10:16:31 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 10 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 130, 480); // n (o, cj)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 135 MB. Current time: 5/6/18 10:16:41 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 123 MB. Current time: 5/6/18 10:16:42 AM CEST
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 123 MB. Current time: 5/6/18 10:16:42 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 123 MB. Current time: 5/6/18 10:16:42 AM CEST
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 123 MB. Current time: 5/6/18 10:16:42 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 123 MB. Current time: 5/6/18 10:16:42 AM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,407 MB. GUI used memory: 123 MB. Current time: 5/6/18 10:16:43 AM CEST
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 14); // u (O, cj)
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 14); // u (O, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis]", 11, true); // u (O, cj) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis]", 11, true); // u (O, cj) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis]", 11, true, false, false, false, true, false); // u (O, cj) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis]", 11, true); // u (O, cj) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis]", 11, true); // u (O, cj) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis]", 11, true, false, false, false, true, false); // u (O, cj) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis]", 11, true); // u (O, cj) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis]", 11, true); // u (O, cj) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 14, true); // u (O, cj) - Node
+// Run Command: PAResourceCommand.PACommandNames_SHOW_IMPLEMENTED_DESIGN
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 15, true); // u (O, cj) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROGRAM_DEBUG
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis]", 13); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis]", 13); // u (O, cj)
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // u (O, cj)
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // u (O, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// x (cj): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // x (cj)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_2 
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_2 -jobs 4 
+// Tcl Message: [Sun May  6 10:17:20 2018] Launched synth_2... Run output will be captured here: C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.runs/synth_2/runme.log 
+// 'k' command handler elapsed time: 4 seconds
+dismissDialog("Starting Design Runs"); // bs (cj)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// ah (cj): Synthesis Completed: addNotify
+// Elapsed time: 66 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "Run Implementation"); // a (N, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_2 -jobs 4 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Sun May  6 10:18:29 2018] Launched impl_2... Run output will be captured here: C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.runs/impl_2/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cj)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ah (cj): Implementation Completed: addNotify
+// Elapsed time: 173 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (N, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// bs (cj):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_2 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Sun May  6 10:21:25 2018] Launched impl_2... Run output will be captured here: C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.runs/impl_2/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cj)
+// Elapsed time: 45 seconds
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 55, 81); // n (q, cj)
+// TclEventType: RUN_COMPLETED
+// ah (cj): Bitstream Generation Completed: addNotify
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+// Elapsed time: 38 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (cj)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cZ, cj)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bA (cj): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bA)
+// bs (cj):  Program Device : addNotify
+dismissDialog("Program Device"); // bA (cj)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a200t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a200t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.runs/impl_2/mse_mandelbrot.bit} [get_hw_devices xc7a200t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a200t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// Tcl Message: program_hw_devices: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2722.027 ; gain = 0.000 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a200t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a200t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 7 seconds
+dismissDialog("Program Device"); // bs (cj)
+// Elapsed time: 47 seconds
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15); // u (O, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15, true); // u (O, cj) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN
+// bs (cj):  Open Synthesized Design : addNotify
+// Tcl Message: open_run synth_2 -name synth_2 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7a200tsbg484-1 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// [Engine Memory]: 2,533 MB (+23871kb) [01:14:34]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,533 MB. GUI used memory: 126 MB. Current time: 5/6/18 10:23:52 AM CEST
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sources_1/ip/clk_vga_hdmi_1024x600/clk_vga_hdmi_1024x600.xdc:57] INFO: [Timing 38-2] Deriving generated clocks [c:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sources_1/ip/clk_vga_hdmi_1024x600/clk_vga_hdmi_1024x600.xdc:57] 
+// Tcl Message: Finished Parsing XDC File [c:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sources_1/ip/clk_vga_hdmi_1024x600/clk_vga_hdmi_1024x600.xdc] for cell 'HdmixI/ClkVgaHdmi1024x600xG.ClkVgaHdmi1024x600xI/inst' Parsing XDC File [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/constrs_1/imports/constr/Nexys-Video-Master.xdc] Finished Parsing XDC File [C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/constrs_1/imports/constr/Nexys-Video-Master.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// 'dO' command handler elapsed time: 5 seconds
+dismissDialog("Open Synthesized Design"); // bs (cj)
+// Tcl Command: 'rdi::info_commands {re*}'
+// Tcl Command: 'rdi::info_commands {repo*}'
+// Tcl Command: 'rdi::info_commands {report*}'
+// Tcl Command: 'rdi::info_commands {report_*}'
+// Tcl Command: 'rdi::info_commands {report_tim*}'
+// Elapsed time: 10 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "report_timing_summary", true); // aF (ae, cj)
+// Tcl Command: 'report_timing_summary'
+// Tcl Command: 'report_timing_summary'
+// Tcl Message: report_timing_summary 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs 
+// TclEventType: TIMING_RESULTS_STALE
+// Elapsed time: 19 seconds
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 543, 128); // dw (ad, cj)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 543, 128, false, false, false, false, true); // dw (ad, cj) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 853, 94, false, false, false, true, false); // dw (ad, cj) - Popup Trigger
+selectMenuItem(RDIResource.TclConsoleView_CLEAR_ALL_OUTPUT, "Clear All Output"); // ac (ai, Popup.HeavyWeightWindow)
+selectButton("RDIResource.TclConsoleView_OK_TO_CLEAR_ALL_OUTPUT_FROM_TCL_CONSOLE_Yes", "Yes"); // JButton (A, G)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 515, 64, false, false, false, true, false); // dw (ad, cj) - Popup Trigger
+// Tcl Command: 'rdi::info_commands {tim*}'
+// Tcl Command: 'rdi::info_commands {timing*}'
+// Tcl Command: 'rdi::info_commands {timing_*}'
+// Tcl Command: 'rdi::info_commands {timing_re*}'
+// Tcl Command: 'rdi::info_commands {timing_reprot*}'
+// Tcl Command: 'rdi::info_commands {re*}'
+// Tcl Command: 'rdi::info_commands {repo*}'
+// Tcl Command: 'rdi::info_commands {report*}'
+// Tcl Command: 'rdi::info_commands {report_*}'
+// Tcl Command: 'rdi::info_commands {report_tim*}'
+// Elapsed time: 14 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "report_timing_summary", true); // aF (ae, cj)
+// Tcl Command: 'report_timing_summary'
+// Tcl Command: 'report_timing_summary'
+// Tcl Message: report_timing_summary 
+// Tcl Message: INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,623 MB. GUI used memory: 135 MB. Current time: 5/6/18 10:24:59 AM CEST
+maximizeFrame(PAResourceOtoP.PAViews_TCL_CONSOLE, "Tcl Console"); // ax (aF, cj)
+// Elapsed time: 104 seconds
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 769, 502); // dw (ad, cj)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 769, 502, false, false, false, false, true); // dw (ad, cj) - Double Click
+// Tcl Command: 'rdi::info_commands {report_timing*}'
+// Elapsed time: 42 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "report_timing", true); // aF (ae, cj)
+// Tcl Command: 'report_timing'
+// Tcl Command: 'report_timing'
+// Tcl Message: report_timing 
+// Tcl Message: INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack. 
+// Elapsed time: 14 seconds
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 430, 468, false, false, false, true, false); // dw (ad, cj) - Popup Trigger
+selectMenuItem(RDIResource.TclConsoleView_CLEAR_ALL_OUTPUT, "Clear All Output"); // ac (ai, Popup.HeavyWeightWindow)
+selectButton("RDIResource.TclConsoleView_OK_TO_CLEAR_ALL_OUTPUT_FROM_TCL_CONSOLE_Yes", "Yes"); // JButton (A, G)
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "report_timing", true); // aF (ae, cj)
+// Tcl Command: 'report_timing'
+// Tcl Command: 'report_timing'
+// Tcl Message: report_timing 
+// Tcl Message: INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max. INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack. 
+// Device view-level: 0.1
+// Elapsed time: 44 seconds
+unMaximizeFrame(PAResourceOtoP.PAViews_TCL_CONSOLE, "Tcl Console"); // ax (aF, cj)

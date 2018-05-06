@@ -1,0 +1,2 @@
+ram_dual_port_sim_netlist.vhdl,vhdl,xil_defaultlib,../../../../mse_mandelbrot.srcs/sources_1/ip/ram_dual_port/ram_dual_port_sim_netlist.vhdl,
+glbl.v,Verilog,xil_defaultlib,glbl.v

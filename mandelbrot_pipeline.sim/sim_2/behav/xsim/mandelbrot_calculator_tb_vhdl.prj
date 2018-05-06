@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl2008 xil_defaultlib  \
+"../../../../../Architecture/mandelbrot_calculator.vhd" \
+"../../../../../Architecture/mandelbrot_calculator_tb.vhd" \
+
+# Do not sort compile order
+nosort

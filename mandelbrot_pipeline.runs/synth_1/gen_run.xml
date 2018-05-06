@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1523887990">
+  <File Type="PA-TCL" Name="mandelbrot_calculator.tcl"/>
+  <File Type="REPORTS-TCL" Name="mandelbrot_calculator_reports.tcl"/>
+  <File Type="RDS-RDS" Name="mandelbrot_calculator.vds"/>
+  <File Type="RDS-DCP" Name="mandelbrot_calculator.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/Labo/Architecture/mandelbrot_calculator.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="ImportPath" Val="$PPRDIR/../Labo/Architecture/mandelbrot_calculator.vhd"/>
+        <Attr Name="ImportTime" Val="1523887608"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Labo/mse_mandelbrot_no_bram/ip/hdl/src/hdmi_interface_pkg.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Labo/mse_mandelbrot_no_bram/ip/hdl/src/hdmi_interface_pkg.vhd"/>
+        <Attr Name="ImportTime" Val="1519825549"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Labo/mse_mandelbrot_no_bram/ip/hdl/src/vga_stripes.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Labo/mse_mandelbrot_no_bram/ip/hdl/src/vga_stripes.vhd"/>
+        <Attr Name="ImportTime" Val="1519745877"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Labo/mse_mandelbrot_no_bram/ip/hdl/src/vga_controler.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Labo/mse_mandelbrot_no_bram/ip/hdl/src/vga_controler.vhd"/>
+        <Attr Name="ImportTime" Val="1520341571"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Labo/mse_mandelbrot_no_bram/ip/hdl/src/vga.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Labo/mse_mandelbrot_no_bram/ip/hdl/src/vga.vhd"/>
+        <Attr Name="ImportTime" Val="1519920400"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Labo/mse_mandelbrot_no_bram/ip/hdl/src/tmds_encoder.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Labo/mse_mandelbrot_no_bram/ip/hdl/src/tmds_encoder.vhd"/>
+        <Attr Name="ImportTime" Val="1518606994"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Labo/mse_mandelbrot_no_bram/ip/hdl/src/serializer_10_to_1.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Labo/mse_mandelbrot_no_bram/ip/hdl/src/serializer_10_to_1.vhd"/>
+        <Attr Name="ImportTime" Val="1519745934"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Labo/mse_mandelbrot_no_bram/ip/hdl/src/vga_to_hdmi.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Labo/mse_mandelbrot_no_bram/ip/hdl/src/vga_to_hdmi.vhd"/>
+        <Attr Name="ImportTime" Val="1519920356"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Labo/mse_mandelbrot_no_bram/ip/hdl/src/hdmi.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Labo/mse_mandelbrot_no_bram/ip/hdl/src/hdmi.vhd"/>
+        <Attr Name="ImportTime" Val="1519986163"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Labo/mse_mandelbrot_no_bram/ip/hdl/src/image_generator.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Labo/mse_mandelbrot_no_bram/ip/hdl/src/image_generator.vhd"/>
+        <Attr Name="ImportTime" Val="1520341595"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Labo/mse_mandelbrot_no_bram/ip/hdl/src/mse_mandelbrot.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Labo/mse_mandelbrot_no_bram/ip/hdl/src/mse_mandelbrot.vhd"/>
+        <Attr Name="ImportTime" Val="1523982974"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/clk_mandelbrot/clk_mandelbrot.xci">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Labo/mse_mandelbrot_no_bram/mse_mandelbrot.srcs/sources_1/ip/clk_mandelbrot/clk_mandelbrot.xci"/>
+        <Attr Name="ImportTime" Val="1523985277"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/bram_video_memory_d786432_w9_rdclk1_wrclk1/bram_video_memory_d786432_w9_rdclk1_wrclk1.xci">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Labo/mse_mandelbrot_no_bram/mse_mandelbrot.srcs/sources_1/ip/bram_video_memory_d786432_w9_rdclk1_wrclk1/bram_video_memory_d786432_w9_rdclk1_wrclk1.xci"/>
+        <Attr Name="ImportTime" Val="1519824091"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Labo/Architecture/ComplexValueGenerator.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Labo/Architecture/ComplexValueGenerator.vhd"/>
+        <Attr Name="ImportTime" Val="1523987031"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="mandelbrot_calculator"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/constr/Nexys-Video-Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Labo/mse_mandelbrot_no_bram/constr/Nexys-Video-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1520341622"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/constr/Nexys-Video-Master.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

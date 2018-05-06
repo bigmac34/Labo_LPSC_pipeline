@@ -1,0 +1,2 @@
+xbip_dsp48_macro_0.vhd,vhdl,xil_defaultlib,../../../../mse_mandelbrot.srcs/sources_1/ip/xbip_dsp48_macro_0/sim/xbip_dsp48_macro_0.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v
