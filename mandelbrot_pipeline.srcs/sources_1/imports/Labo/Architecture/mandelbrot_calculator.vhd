@@ -166,23 +166,29 @@ begin
 							z_new_real_x_imaginary_s,z_new_real2_s,z_new_imaginary2_s, z_new_real2_sub_imaginary2_s, c_real_s, z_new_2_real_x_imaginary_s, c_imaginary_s)
 	begin
 		--  Multiplexeur  --
-		--z_real_s 		<= z_new_real_s;
-		--z_imaginary_s 	<= z_new_imaginary_s;
+		z_real_s 		<= z_new_real_s;
+		z_imaginary_s 	<= z_new_imaginary_s;
 
 		--  Multiplicateurs  --
-		z_real2_s				<= std_logic_vector(signed(z_new_real_s) * signed(z_new_real_s));				-- ZR^2
-		z_imaginary2_s			<= std_logic_vector(signed(z_new_imaginary_s) * signed(z_new_imaginary_s));		-- ZI^2
-		z_real_x_imaginary_s	<= std_logic_vector(signed(z_new_real_s) * signed(z_new_imaginary_s));			-- ZR*ZI
+		z_real2_s				<= std_logic_vector(signed(z_real_s) * signed(z_real_s));				-- ZR^2
+		z_imaginary2_s			<= std_logic_vector(signed(z_imaginary_s) * signed(z_imaginary_s));		-- ZI^2
+		z_real_x_imaginary_s	<= std_logic_vector(signed(z_real_s) * signed(z_imaginary_s));			-- ZR*ZI
 		
 		z_2_real_x_imaginary_s	<= std_logic_vector(z_new_real_x_imaginary_s(DOUBLE_SIZE-2 downto 0) & '0');-- 2*ZR*ZI
 
 		--  Additionneurs - Soustracteurs  --
 		z_real2_sub_imaginary2_s 	<= std_logic_vector(signed(z_new_real2_s) - signed(z_new_imaginary2_s));	-- ZR^2-ZI^2
 		z_real2_add_imaginary2_s 	<= std_logic_vector(signed(z_new_real2_s) + signed(z_new_imaginary2_s));	-- ZR^2+ZI^2
+		
 		z_real_fut_s				<= std_logic_vector(signed(z_new_real2_sub_imaginary2_s) + signed(std_logic_vector'(c_real_s & "000000000000")));
 		z_imaginary_fut_s			<= std_logic_vector(signed(z_new_2_real_x_imaginary_s) + signed(std_logic_vector'(c_imaginary_s & "000000000000")));
-		new_iterations_s			<= std_logic_vector(signed(iterations_s) + 1);
-
+		
+--		if(enable_calcul = '1') then
+--			new_iterations_s			<= std_logic_vector(signed(iterations_s) + 1);
+--		else
+			new_iterations_s			<= std_logic_vector(signed(iterations_s));
+--		end if;
+		
 		--  Comparateurs  --
 		-- Valeurs plus grande que 2^2
 		if(unsigned(z_new_real2_add_imaginary2_s) > unsigned(val_limite)) then
@@ -231,17 +237,25 @@ begin
 			
 			-- Multiplexeurs --
 			if rst_calcul = '1' then
-				z_new_real_s					<= (others => '0');
-				z_new_imaginary_s				<= (others => '0');
+				--z_new_real_s					<= (others => '0');
+				--z_new_imaginary_s				<= (others => '0');
 				iterations_s					<= (others => '0');
 				
-				c_tab_real_s(compteur)		<= (c_buf_real_s);
-				c_tab_imaginary_s(compteur) <= (c_buf_imaginary_s);
-				x_tab_screen_s(compteur) 	<= (x_buf_screen_s);
-				y_tab_screen_s(compteur) 	<= (y_buf_screen_s);
+				c_tab_real_s(compteur)			<= (c_buf_real_s);
+				c_tab_imaginary_s(compteur) 	<= (c_buf_imaginary_s);
+				x_tab_screen_s(compteur) 		<= (x_buf_screen_s);
+				y_tab_screen_s(compteur) 		<= (y_buf_screen_s);
 				
-				z_new_real2_add_imaginary2_s	<= (others => '0');
-					
+				  z_new_real2_add_imaginary2_s	<= (others => '0');
+				  z_new_2_real_x_imaginary_s		<= (others => '0');
+				  z_new_real2_sub_imaginary2_s		<= (others => '0');
+				   --z_new_real2_add_imaginary2_s		<= (others => '0');
+				   --new_iterations2_s				<= (others => '0');
+				   
+				  -- z_new_real2_s					<= (others => '0');
+				  -- z_new_imaginary2_s				<= (others => '0');
+				  -- z_new_real_x_imaginary_s			<= (others => '0');
+				   
 			elsif (enable_calcul = '1') then
 				-- 1er etage de bascule
 				z_new_real2_s					<= z_real2_s;
@@ -258,9 +272,11 @@ begin
 				z_new_real_s	 	<= z_real_fut_s((SIZE+comma-1) downto comma);
 				z_new_imaginary_s	<= z_imaginary_fut_s((SIZE+comma-1) downto comma);
 				
+					--new_iterations_s			<= std_logic_vector(signed(iterations_s) + 1);
+				
 				new_iterations2_s	<= new_iterations_s;
 				new_iterations3_s	<= new_iterations2_s;
-				iterations_s	    <= new_iterations3_s;
+				iterations_s	    <= std_logic_vector(signed(new_iterations3_s) + 1);-- new_iterations3_s;
 			end if;
 		end if;
 	end process;
@@ -277,12 +293,13 @@ begin
 		rst_calcul 		<= '0';
 
 		case EtatPresent is
-			-- Prêt à lancer un nouveau calcul --
+			-- Pret a lancer un nouveau calcul --
 			when S_READY  =>
 				ready <= '1';
 				if (start = '1') then
 					-- Mise à zero avant nouveau calcul
 					rst_calcul <= '1';
+					   --enable_calcul <= '1';
 					EtatFutur <= S_PROCESS;
 				else
 					EtatFutur <= S_READY;
@@ -318,31 +335,31 @@ begin
 		case EtatPresentCompt is
 			-- Prêt �  lancer un nouveau calcul --
 			when S0  =>
-				c_real_s		<= c_tab_real_s(1);	
-				c_imaginary_s 	<= c_tab_imaginary_s(1);	
-				x_screen_s 		<= x_tab_screen_s(1);
-				y_screen_s 		<= y_tab_screen_s(1);
+				c_real_s		<= c_tab_real_s(0);	
+				c_imaginary_s 	<= c_tab_imaginary_s(0);	
+				x_screen_s 		<= x_tab_screen_s(0);
+				y_screen_s 		<= y_tab_screen_s(0);
 				
-				compteur <= 1;
+				compteur <= 0;
 				EtatFuturCompt <= S1;
 
 			-- Calcul et cours --
 			when S1  =>
-				c_real_s 		<= c_tab_real_s(2);	
-				c_imaginary_s	<= c_tab_imaginary_s(2);
-				x_screen_s 		<= x_tab_screen_s(2);
-				y_screen_s 		<= y_tab_screen_s(2);
+				c_real_s 		<= c_tab_real_s(1);	
+				c_imaginary_s	<= c_tab_imaginary_s(1);
+				x_screen_s 		<= x_tab_screen_s(1);
+				y_screen_s 		<= y_tab_screen_s(1);
 				
-				compteur <= 2;
+				compteur <= 1;
 				EtatFuturCompt <= S2;
 				
 			when S2  =>
-				c_real_s 		<= c_tab_real_s(0);	
-				c_imaginary_s 	<= c_tab_imaginary_s(0);
-				x_screen_s 		<= x_tab_screen_s(0);
-				y_screen_s 		<= y_tab_screen_s(0);
+				c_real_s 		<= c_tab_real_s(2);	
+				c_imaginary_s 	<= c_tab_imaginary_s(2);
+				x_screen_s 		<= x_tab_screen_s(2);
+				y_screen_s 		<= y_tab_screen_s(2);
 				
-				compteur <=0;
+				compteur <=2;
 				EtatFuturCompt <= S0;
 
 			when others => null;

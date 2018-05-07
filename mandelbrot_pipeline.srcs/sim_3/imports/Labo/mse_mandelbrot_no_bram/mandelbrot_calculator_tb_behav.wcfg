@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="38012474fs"></ZoomStartTime>
-      <ZoomEndTime time="141989076fs"></ZoomEndTime>
-      <Cursor1Time time="41456000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="10508285357fs"></ZoomEndTime>
+      <Cursor1Time time="7754000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="272"></NameColumnWidth>
-      <ValueColumnWidth column_width="81"></ValueColumnWidth>
+      <NameColumnWidth column_width="271"></NameColumnWidth>
+      <ValueColumnWidth column_width="67"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="37" />
+   <WVObjectSize size="34" />
    <wvobject fp_name="/mandelbrot_calculator_tb/clk_sti" type="logic">
       <obj_property name="ElementShortName">clk_sti</obj_property>
       <obj_property name="ObjectShortName">clk_sti</obj_property>
@@ -36,9 +36,25 @@
       <obj_property name="ElementShortName">start_sti</obj_property>
       <obj_property name="ObjectShortName">start_sti</obj_property>
    </wvobject>
+   <wvobject fp_name="/mandelbrot_calculator_tb/duv/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
    <wvobject fp_name="/mandelbrot_calculator_tb/finished_obs" type="logic">
       <obj_property name="ElementShortName">finished_obs</obj_property>
       <obj_property name="ObjectShortName">finished_obs</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mandelbrot_calculator_tb/duv/enable_calcul" type="logic">
+      <obj_property name="ElementShortName">enable_calcul</obj_property>
+      <obj_property name="ObjectShortName">enable_calcul</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mandelbrot_calculator_tb/duv/rst_calcul" type="logic">
+      <obj_property name="ElementShortName">rst_calcul</obj_property>
+      <obj_property name="ObjectShortName">rst_calcul</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mandelbrot_calculator_tb/duv/EtatPresent" type="logic">
+      <obj_property name="ElementShortName">EtatPresent</obj_property>
+      <obj_property name="ObjectShortName">EtatPresent</obj_property>
    </wvobject>
    <wvobject fp_name="/mandelbrot_calculator_tb/c_real_sti" type="array">
       <obj_property name="ElementShortName">c_real_sti[15:0]</obj_property>
@@ -77,26 +93,6 @@
       <obj_property name="ObjectShortName">iterations_obs[6:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/mandelbrot_calculator_tb/sim_end_s" type="other">
-      <obj_property name="ElementShortName">sim_end_s</obj_property>
-      <obj_property name="ObjectShortName">sim_end_s</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mandelbrot_calculator_tb/comma" type="other">
-      <obj_property name="ElementShortName">comma</obj_property>
-      <obj_property name="ObjectShortName">comma</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mandelbrot_calculator_tb/max_iter" type="other">
-      <obj_property name="ElementShortName">max_iter</obj_property>
-      <obj_property name="ObjectShortName">max_iter</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mandelbrot_calculator_tb/SIZE" type="other">
-      <obj_property name="ElementShortName">SIZE</obj_property>
-      <obj_property name="ObjectShortName">SIZE</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mandelbrot_calculator_tb/duv/EtatPresent" type="logic">
-      <obj_property name="ElementShortName">EtatPresent</obj_property>
-      <obj_property name="ObjectShortName">EtatPresent</obj_property>
-   </wvobject>
    <wvobject fp_name="/mandelbrot_calculator_tb/duv/new_iterations_s" type="array">
       <obj_property name="ElementShortName">new_iterations_s[6:0]</obj_property>
       <obj_property name="ObjectShortName">new_iterations_s[6:0]</obj_property>
@@ -110,11 +106,6 @@
    <wvobject fp_name="/mandelbrot_calculator_tb/duv/new_iterations3_s" type="array">
       <obj_property name="ElementShortName">new_iterations3_s[6:0]</obj_property>
       <obj_property name="ObjectShortName">new_iterations3_s[6:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mandelbrot_calculator_tb/duv/iterations_s" type="array">
-      <obj_property name="ElementShortName">iterations_s[6:0]</obj_property>
-      <obj_property name="ObjectShortName">iterations_s[6:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/mandelbrot_calculator_tb/duv/z_real2_add_imaginary2_s" type="array">
@@ -176,10 +167,6 @@
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">12</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
-   </wvobject>
-   <wvobject fp_name="/mandelbrot_calculator_tb/duv/enable_calcul" type="logic">
-      <obj_property name="ElementShortName">enable_calcul</obj_property>
-      <obj_property name="ObjectShortName">enable_calcul</obj_property>
    </wvobject>
    <wvobject fp_name="/mandelbrot_calculator_tb/duv/z_real_fut_s" type="array">
       <obj_property name="ElementShortName">z_real_fut_s[31:0]</obj_property>
