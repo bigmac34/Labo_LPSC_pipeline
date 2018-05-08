@@ -36,6 +36,8 @@ entity mse_mandelbrot is
     port (
         ClkSys100MhzxC : in    std_logic;
         RstxR          : in    std_logic;
+        btnu		   : in    std_logic;
+        btnd		   : in    std_logic;
         -- HDMI
         HdmiTxRsclxSO  : out   std_logic;
         HdmiTxRsdaxSIO : inout std_logic;
@@ -87,6 +89,8 @@ architecture rtl of mse_mandelbrot is
 	constant C_Y_SIZE							: integer := 600;
 	constant C_SIZE_INTER						: integer := 7;
 	
+	constant C_DEBOUNCE                        : integer := 19;
+
     component hdmi is
         generic (
             C_CHANNEL_NUMBER : integer;
@@ -128,26 +132,57 @@ architecture rtl of mse_mandelbrot is
 --            DataxDO      : out std_logic_vector(((C_PIXEL_SIZE * 3) - 1) downto 0));
 --    end component image_generator;
 
-	component ComplexValueGenerator is
-		generic
-		  (SIZE        : integer;  -- Taille en bits de nombre au format virgule fixe
-		   COMMA       : integer;  -- Nombre de bits aprÃ¨s la virgule
-		   X_SIZE      : integer;  -- Taille en X (Nombre de pixel) de la fractale Ã  afficher
-		   Y_SIZE      : integer;  -- Taille en Y (Nombre de pixel) de la fractale Ã  afficher
-		   SCREEN_RES  : integer    -- Nombre de bit pour les vecteurs X et Y de la position du pixel
-		  );   
-		port
-		  (clk         : in  std_logic;
-		   reset       : in  std_logic;
-		   -- interface avec le module MandelbrotMiddleware
-		   next_value  : in  std_logic;
-		   c_real      : out std_logic_vector (SIZE-1 downto 0);
-		   c_imaginary : out std_logic_vector (SIZE-1 downto 0);
-		   X_screen    : out std_logic_vector (SCREEN_RES-1 downto 0);
-		   Y_screen    : out std_logic_vector (SCREEN_RES-1 downto 0)
-		   );
-	end component ComplexValueGenerator;
+--	component ComplexValueGenerator is
+--		generic
+--		  (SIZE        : integer;  -- Taille en bits de nombre au format virgule fixe
+--		   COMMA       : integer;  -- Nombre de bits aprÃ¨s la virgule
+--		   X_SIZE      : integer;  -- Taille en X (Nombre de pixel) de la fractale Ã  afficher
+--		   Y_SIZE      : integer;  -- Taille en Y (Nombre de pixel) de la fractale Ã  afficher
+--		   SCREEN_RES  : integer    -- Nombre de bit pour les vecteurs X et Y de la position du pixel
+--		  );   
+--		port
+--		  (clk         : in  std_logic;
+--		   reset       : in  std_logic;
+--		   -- interface avec le module MandelbrotMiddleware
+--		   next_value  : in  std_logic;
+--		   c_real      : out std_logic_vector (SIZE-1 downto 0);
+--		   c_imaginary : out std_logic_vector (SIZE-1 downto 0);
+--		   X_screen    : out std_logic_vector (SCREEN_RES-1 downto 0);
+--		   Y_screen    : out std_logic_vector (SCREEN_RES-1 downto 0)
+--		   );
+--	end component ComplexValueGenerator;
 
+	component c_gen is
+		 generic (
+	       C_FXP_SIZE   : integer := 16;
+	       C_X_SIZE     : integer := 1024;
+	       C_Y_SIZE     : integer := 600;
+	       C_SCREEN_RES : integer := 11);
+
+	   port (
+	       ClkxC         : in  std_logic;
+	       RstxRA        : in  std_logic;
+	       ZoomInxSI     : in  std_logic;
+	       ZoomOutxSI    : in  std_logic;
+	       CRealxDO      : out std_logic_vector((C_FXP_SIZE - 1) downto 0);
+	       CImaginaryxDO : out std_logic_vector((C_FXP_SIZE - 1) downto 0);
+	       XScreenxDO    : out std_logic_vector((C_SCREEN_RES - 1) downto 0);
+	       YScreenxDO    : out std_logic_vector((C_SCREEN_RES - 1) downto 0)
+	   );
+	end component c_gen;
+	
+	--
+	-- Anti-rebond
+	--
+	component debounce is
+	  	GENERIC(
+		  counter_size  :  INTEGER := 19); --counter size (19 bits gives 10.5ms with 50MHz clock)
+		PORT(
+		  clk     : IN  STD_LOGIC;  --input clock
+		  button  : IN  STD_LOGIC;  --input signal to be debounced
+		  result  : OUT STD_LOGIC); --debounced signal
+	end component debounce;
+	
 	---------------------------------------------------------------------------
     -- Calculator 
     ---------------------------------------------------------------------------
@@ -222,6 +257,10 @@ architecture rtl of mse_mandelbrot is
    	-- RAM Dual Port
    	signal doutb_ram_s		: std_logic_vector (C_SIZE_INTER-1 downto 0)	:= (others => '0');
    	signal wea_ram_s		: std_logic_vector (0 downto 0)					:= (others => '1');
+
+	-- Antirebond
+	signal anti_rebond_in_zoom 		: std_logic										:= '0' ;
+	signal anti_rebond2_out_zoom 	: std_logic										:= '0' ;
 
     -- Debug signals
 
@@ -326,37 +365,97 @@ begin  -- architecture rtl
 
 --    end block ImageGeneratorxB;
 
-    ComplexValueGeneratorxB : block is
-    begin  -- block ImageGeneratorxB
+--    ComplexValueGeneratorxB : block is
+--    begin  -- block ImageGeneratorxB
 
-        ---------------------------------------------------------------------------
-        -- Complex Value Generator
-        ---------------------------------------------------------------------------
-        ComplexValueGeneratorxI : entity work.ComplexValueGenerator
-            generic map (
-                SIZE  		=> C_DATA_SIZE,
-                SCREEN_RES 	=> C_SCREEN_RES,
-                COMMA		=> C_COMMA_SIZE,
-                X_SIZE   	=> C_X_SIZE,	
-				Y_SIZE		=> C_Y_SIZE)
-            port map (
-              	clk         => ClkSys100MhzxC,
-               	reset       => RstxR,
-              	 -- interface avec le module MandelbrotMiddleware
-              	next_value  => finished_s,
-               	c_real      => c_real_s,
-               	c_imaginary => c_imaginary_s,
-               	X_screen    => X_screen_gen_s,
-               	Y_screen    => Y_screen_gen_s);
+--        ---------------------------------------------------------------------------
+--        -- Complex Value Generator
+--        ---------------------------------------------------------------------------
+--        ComplexValueGeneratorxI : entity work.ComplexValueGenerator
+--            generic map (
+--                SIZE  		=> C_DATA_SIZE,
+--                SCREEN_RES 	=> C_SCREEN_RES,
+--                COMMA		=> C_COMMA_SIZE,
+--                X_SIZE   	=> C_X_SIZE,	
+--				Y_SIZE		=> C_Y_SIZE)
+--            port map (
+--              	clk         => ClkSys100MhzxC,
+--               	reset       => RstxR,
+--              	 -- interface avec le module MandelbrotMiddleware
+--              	next_value  => finished_s,
+--               	c_real      => c_real_s,
+--               	c_imaginary => c_imaginary_s,
+--               	X_screen    => X_screen_gen_s,
+--               	Y_screen    => Y_screen_gen_s);
 
-    end block ComplexValueGeneratorxB;
+--    end block ComplexValueGeneratorxB;
+	c_genxB : block is
+	begin  -- block ImageGeneratorxB
 
+		---------------------------------------------------------------------------
+		-- Complex Value Generator
+		---------------------------------------------------------------------------
+		c_genxI : entity work.c_gen
+			generic map (
+				C_FXP_SIZE  	=> C_DATA_SIZE,
+				C_SCREEN_RES 	=> C_SCREEN_RES,
+			   -- COMMA		=> C_COMMA_SIZE,
+				C_X_SIZE   	=> C_X_SIZE,	
+				C_Y_SIZE		=> C_Y_SIZE)
+			port map (
+				ClkxC         => ClkSys100MhzxC,
+				RstxRA       => RstxR,
+				 -- interface avec le module MandelbrotMiddleware
+				NextValue  => finished_s,
+				ZoomInxSI	  => anti_rebond_in_zoom,
+				ZoomOutxSI	  => anti_rebond2_out_zoom,
+				
+				CRealxDO      => c_real_s,
+				CImaginaryxDO => c_imaginary_s,
+				XScreenxDO    => X_screen_gen_s,
+				YScreenxDO    => Y_screen_gen_s);
+
+end block c_genxB;
+
+	debouncexB : block is
+	begin  -- block ImageGeneratorxB
+
+		---------------------------------------------------------------------------
+		-- Complex Value Generator
+		---------------------------------------------------------------------------
+		debouncexI : entity work.debounce
+			generic map (
+				counter_size  	=> C_DEBOUNCE)
+			port map (
+				clk         => ClkSys100MhzxC,
+				button      => btnu,
+				result  	=> anti_rebond_in_zoom
+				);
+
+end block debouncexB;
+
+	debouncexA : block is
+	begin  -- block ImageGeneratorxB
+
+		---------------------------------------------------------------------------
+		-- Complex Value Generator
+		---------------------------------------------------------------------------
+		debouncexJ : entity work.debounce
+			generic map (
+				counter_size  	=> C_DEBOUNCE)
+			port map (
+				clk         => ClkSys100MhzxC,
+				button      => btnd,
+				result  	=> anti_rebond2_out_zoom
+				);
+
+end block debouncexA;
 
     mandelbrot_calculatorxB : block is
     begin  -- block ImageGeneratorxB
 
         ---------------------------------------------------------------------------
-        -- Complex Value Generator
+        -- CMandelbrot Calculator
         ---------------------------------------------------------------------------
         mandelbrot_calculatorxI : entity work.mandelbrot_calculator
             generic map (

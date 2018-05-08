@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_2" LaunchPart="xc7a200tsbg484-1" LaunchTime="1525690542">
+<GenRun Id="synth_2" LaunchPart="xc7a200tsbg484-1" LaunchTime="1525800068">
   <File Type="PA-TCL" Name="mse_mandelbrot.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="mse_mandelbrot_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="mse_mandelbrot_reports.tcl"/>
@@ -11,6 +11,12 @@
   <File Type="VDS-TIMING-PB" Name="mse_mandelbrot_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/Labo/Architecture/debounce.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/Labo/mse_mandelbrot_no_bram/ip/hdl/src/hdmi_interface_pkg.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../Labo/mse_mandelbrot_no_bram/ip/hdl/src/hdmi_interface_pkg.vhd"/>
@@ -19,10 +25,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/Labo/Architecture/ComplexValueGenerator.vhd">
+    <File Path="$PSRCDIR/sources_1/imports/Labo/Architecture/ComplexValueGenerator2.vhd">
       <FileInfo SFType="VHDL2008">
-        <Attr Name="ImportPath" Val="$PPRDIR/../Labo/Architecture/ComplexValueGenerator.vhd"/>
-        <Attr Name="ImportTime" Val="1523987031"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Labo/Architecture/c_gen.vhd">
+      <FileInfo SFType="VHDL2008">
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -99,6 +109,15 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/Labo/Architecture/ComplexValueGenerator.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Labo/Architecture/ComplexValueGenerator.vhd"/>
+        <Attr Name="ImportTime" Val="1523987031"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/Labo/mse_mandelbrot_no_bram/ip/hdl/src/image_generator.vhd">
       <FileInfo SFType="VHDL2008">
         <Attr Name="AutoDisabled" Val="1"/>
@@ -159,9 +178,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="clk_vga_hdmi_1024x600"/>

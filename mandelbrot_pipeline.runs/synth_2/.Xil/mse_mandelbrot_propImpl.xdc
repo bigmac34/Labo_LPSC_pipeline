@@ -1,6 +1,10 @@
 set_property SRC_FILE_INFO {cfile:C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/constrs_1/imports/constr/Nexys-Video-Master.xdc rfile:../../../mandelbrot_pipeline.srcs/constrs_1/imports/constr/Nexys-Video-Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN R4 IOSTANDARD LVCMOS33} [get_ports ClkSys100MhzxC]
+set_property src_info {type:XDC file:1 line:34 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN D22 IOSTANDARD LVCMOS12 } [get_ports { btnd }]; #IO_L22N_T3_16 Sch=btnd
+set_property src_info {type:XDC file:1 line:37 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN F15 IOSTANDARD LVCMOS12 } [get_ports { btnu }]; #IO_0_16 Sch=btnu
 set_property src_info {type:XDC file:1 line:41 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN B22 IOSTANDARD LVCMOS12} [get_ports RstxR]
 set_property src_info {type:XDC file:1 line:80 export:INPUT save:INPUT read:READ} [current_design]
