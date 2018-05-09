@@ -40,7 +40,7 @@ ARCHITECTURE logic OF debounce IS
 BEGIN
 
   counter_set <= flipflops(0) xor flipflops(1);   --determine when to start/reset counter
-  
+
   PROCESS(clk)
   BEGIN
     IF(clk'EVENT and clk = '1') THEN
@@ -52,7 +52,7 @@ BEGIN
         counter_out <= counter_out + 1;
       ELSE                                        --stable input time is met
         result <= flipflops(1);
-      END IF;    
+      END IF;
     END IF;
   END PROCESS;
 END logic;
