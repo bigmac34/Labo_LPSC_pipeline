@@ -1,0 +1,75 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sun May  6 09:09:10 2018
+# Process ID: 6536
+# Current directory: C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6236 C:\Users\Jeremie\Dropbox\Master\Cours\Semestre2\LPSC\Labo\mandelbrot_pipeline\mandelbrot_pipeline.xpr
+# Log file: C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/vivado.log
+# Journal file: C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.xpr
+update_compile_order -fileset sources_1
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+launch_runs impl_2 -jobs 4
+wait_on_run impl_2
+open_run impl_2
+open_hw
+connect_hw_server
+launch_runs impl_2 -to_step write_bitstream -jobs 4
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a200t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a200t_0]
+set_property PROGRAM.FILE {C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.runs/impl_2/mse_mandelbrot.bit} [get_hw_devices xc7a200t_0]
+program_hw_devices [get_hw_devices xc7a200t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a200t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a200t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a200t_0]
+set_property PROGRAM.FILE {C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.runs/impl_2/mse_mandelbrot.bit} [get_hw_devices xc7a200t_0]
+program_hw_devices [get_hw_devices xc7a200t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a200t_0] 0]
+undo
+set_property PROBES.FILE {} [get_hw_devices xc7a200t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a200t_0]
+set_property PROGRAM.FILE {C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.runs/impl_2/mse_mandelbrot.bit} [get_hw_devices xc7a200t_0]
+program_hw_devices [get_hw_devices xc7a200t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a200t_0] 0]
+launch_simulation -simset sim_3
+launch_simulation -simset sim_3
+launch_simulation -simset sim_3
+launch_simulation -simset sim_3
+launch_simulation -simset sim_3
+launch_simulation -simset sim_3
+launch_simulation -simset sim_3
+launch_simulation -simset sim_3
+open_wave_config C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sim_3/imports/Labo/mse_mandelbrot_no_bram/mandelbrot_calculator_tb_behav.wcfg
+source mandelbrot_calculator_tb.tcl
+close_sim
+launch_simulation -simset sim_3
+open_wave_config C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sim_3/imports/Labo/mse_mandelbrot_no_bram/mandelbrot_calculator_tb_behav.wcfg
+source mandelbrot_calculator_tb.tcl
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+launch_runs impl_2 -jobs 4
+wait_on_run impl_2
+launch_runs impl_2 -to_step write_bitstream -jobs 4
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a200t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a200t_0]
+set_property PROGRAM.FILE {C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.runs/impl_2/mse_mandelbrot.bit} [get_hw_devices xc7a200t_0]
+program_hw_devices [get_hw_devices xc7a200t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a200t_0] 0]
+open_run synth_2 -name synth_2
+report_timing_summary
+report_timing_summary
+report_timing
+report_timing
+close_sim

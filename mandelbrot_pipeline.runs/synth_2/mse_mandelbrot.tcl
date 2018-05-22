@@ -148,6 +148,7 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property ip_output_repo c:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
+add_files C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sources_1/ip/test.coe
 read_vhdl -library xil_defaultlib {
   C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sources_1/imports/Labo/Architecture/debounce.vhd
   C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sources_1/imports/Labo/mse_mandelbrot_no_bram/ip/hdl/src/hdmi_interface_pkg.vhd
@@ -165,6 +166,11 @@ read_vhdl -vhdl2008 -library xil_defaultlib {
   C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sources_1/imports/Labo/Architecture/mandelbrot_calculator.vhd
   C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sources_1/imports/Labo/mse_mandelbrot_no_bram/ip/hdl/src/mse_mandelbrot.vhd
 }
+read_ip -quiet C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sources_1/ip/clk_mandelbrot/clk_mandelbrot.xci
+set_property used_in_implementation false [get_files -all c:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sources_1/ip/clk_mandelbrot/clk_mandelbrot_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sources_1/ip/clk_mandelbrot/clk_mandelbrot.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sources_1/ip/clk_mandelbrot/clk_mandelbrot_ooc.xdc]
+
 read_ip -quiet C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sources_1/ip/clk_vga_hdmi_1024x600/clk_vga_hdmi_1024x600.xci
 set_property used_in_implementation false [get_files -all c:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sources_1/ip/clk_vga_hdmi_1024x600/clk_vga_hdmi_1024x600_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sources_1/ip/clk_vga_hdmi_1024x600/clk_vga_hdmi_1024x600.xdc]
@@ -172,6 +178,9 @@ set_property used_in_implementation false [get_files -all c:/Users/Jeremie/Dropb
 
 read_ip -quiet C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sources_1/ip/ram_dual_port/ram_dual_port.xci
 set_property used_in_implementation false [get_files -all c:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sources_1/ip/ram_dual_port/ram_dual_port_ooc.xdc]
+
+read_ip -quiet C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -184,6 +193,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/constrs_1/imports/constr/Nexys-Video-Master.xdc
 set_property used_in_implementation false [get_files C:/Users/Jeremie/Dropbox/Master/Cours/Semestre2/LPSC/Labo/mandelbrot_pipeline/mandelbrot_pipeline.srcs/constrs_1/imports/constr/Nexys-Video-Master.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 
 synth_design -top mse_mandelbrot -part xc7a200tsbg484-1
 

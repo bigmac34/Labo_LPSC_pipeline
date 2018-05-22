@@ -183,6 +183,23 @@ architecture rtl of mse_mandelbrot is
     );
   end component mandelbrot_calculator;
 
+ ---------------------------------------------------------------------------
+  -- Composant PLL
+  ---------------------------------------------------------------------------
+	component clk_mandelbrot
+	port
+	 (-- Clock in ports
+	  -- Clock out ports
+	  ClkMandelxC          : out    std_logic;
+	  -- Status and control signals
+	  reset             : in     std_logic;
+	  PllLockedxSO            : out    std_logic;
+	  ClkSys100MhzxC           : in     std_logic
+	 );
+	end component;
+	
+	signal ClkMandelxC	: std_logic := '0';
+	signal rstPll		: std_logic := '0';
   ---------------------------------------------------------------------------
   -- Composant RAM Dual Port
   ---------------------------------------------------------------------------
@@ -235,6 +252,19 @@ architecture rtl of mse_mandelbrot is
   signal anti_rebond_in_zoom 		: std_logic								                		:= '0' ;
   signal anti_rebond2_out_zoom 	: std_logic								                 		:= '0' ;
 
+---------------------------------------------------------------------------
+  -- Conversion couleur
+  ---------------------------------------------------------------------------
+COMPONENT dist_mem_gen_0
+    PORT (
+      a : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+      spo : OUT STD_LOGIC_VECTOR(23 DOWNTO 0)
+    );
+  END COMPONENT;
+
+	signal a :  STD_LOGIC_VECTOR(6 DOWNTO 0) := (others => '0');
+	signal spo : STD_LOGIC_VECTOR(23 DOWNTO 0) := (others => '0');
+	
   -- Debug signals
 
   -- attribute mark_debug                               : string;
@@ -299,7 +329,9 @@ architecture rtl of mse_mandelbrot is
   HCountxDO      => HCountxD,
   VCountxDO      => VCountxD,
   VidOnxSO       => VidOnxS,
-  DataxDI        => doutb_ram_s & '0' & doutb_ram_s & '0' & doutb_ram_s & '0', -- modification
+  --DataxDI        => doutb_ram_s & '0' & doutb_ram_s & '0' & doutb_ram_s & '0', -- modification
+ -- DataxDI        => doutb_ram_s & '0' & doutb_ram_s & '0' & doutb_ram_s & '0', -- modification
+  DataxDI        => spo, -- modification
   HdmiTxRsclxSO  => HdmiSourcexD.HdmiSourceOutxD.HdmiTxRsclxS,
   HdmiTxRsdaxSIO => HdmiSourcexD.HdmiSourceInOutxS.HdmiTxRsdaxS,
   HdmiTxHpdxSI   => HdmiSourcexD.HdmiSourceInxS.HdmiTxHpdxS,
@@ -330,10 +362,10 @@ architecture rtl of mse_mandelbrot is
     C_X_SIZE   	=> C_X_SIZE,
     C_Y_SIZE		=> C_Y_SIZE)
     port map (
-    ClkxC         => ClkSys100MhzxC,
-    RstxRA       => RstxR,
+    ClkxC         => ClkMandelxC,
+    RstxRA       => not(rstPll),
     -- interface avec le module MandelbrotMiddleware
-    NextValue  => finished_s,
+    NextValue	=> finished_s,
     ZoomInxSI	  => anti_rebond_in_zoom,
     ZoomOutxSI	  => anti_rebond2_out_zoom,
 
@@ -354,7 +386,7 @@ architecture rtl of mse_mandelbrot is
     generic map (
     counter_size  => C_DEBOUNCE)
     port map (
-    clk           => ClkSys100MhzxC,
+    clk           => ClkMandelxC,
     button        => btnu,
     result  	    => anti_rebond_in_zoom
     );
@@ -371,7 +403,7 @@ architecture rtl of mse_mandelbrot is
     generic map (
     counter_size  => C_DEBOUNCE)
     port map (
-    clk           => ClkSys100MhzxC,
+    clk           => ClkMandelxC,
     button        => btnd,
     result  	    => anti_rebond2_out_zoom
     );
@@ -392,8 +424,8 @@ architecture rtl of mse_mandelbrot is
     SCREEN_RES	=> C_SCREEN_RES,
     SIZE_ITER	=> C_SIZE_ITER)
     port map (
-    clk 	 	    => ClkSys100MhzxC,
-    rst 	     	=> RstxR,
+    clk 	 	    => ClkMandelxC,
+    rst 	     	=> not(rstPll),
     ready	    	=> ready_cal_s,
     start	    	=> ready_cal_s, --start_cal_s,
     finished   	=> finished_s,
@@ -410,6 +442,20 @@ architecture rtl of mse_mandelbrot is
 
   end block mandelbrot_calculatorxB;
 
+  clk_mandelbrotxB : block is
+    begin  -- block ImageGeneratorxB
+	clk_mandelbrotxI : clk_mandelbrot
+   port map ( 
+	  -- Clock out ports  
+	   ClkMandelxC => ClkMandelxC,
+	  -- Status and control signals                
+	   reset => RstxR,
+	   PllLockedxSO => rstPll,
+	   -- Clock in ports
+	   ClkSys100MhzxC => ClkSys100MhzxC
+	);
+   end block clk_mandelbrotxB;
+
   ram_dual_portxB : block is
     begin  -- block ImageGeneratorxB
 
@@ -419,7 +465,7 @@ architecture rtl of mse_mandelbrot is
     ---------------------------------------------------------------------------
     ram_dual_portxI : ram_dual_port
     port map (
-    clka 	=> ClkSys100MhzxC,
+    clka 	=> ClkMandelxC,
     wea		=> wea_ram_s,
     addra	=> y_screen_cal_s & x_screen_cal_s,
     dina	=> iterations_s,
@@ -430,4 +476,19 @@ architecture rtl of mse_mandelbrot is
 
   end block ram_dual_portxB;
 
+
+  rom_portxB : block is
+    begin  -- block ImageGeneratorxB
+
+    ---------------------------------------------------------------------------
+    -- ROM converion couleur
+    ---------------------------------------------------------------------------
+rom_portxI : dist_mem_gen_0
+      PORT MAP (
+        a => doutb_ram_s,
+        spo => spo
+      );
+
+  end block rom_portxB;
+  
 end architecture rtl;
